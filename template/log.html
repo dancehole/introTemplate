@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <!--设置过期时间设置0为直接过期并清除缓存-->
+  <meta http-equiv="Expires" content="0">
+  <!--设置不缓存页面-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <!--设置不修改消息存储-->
+  <meta http-equiv="Cache-control" content="no-cache">
+  <!--同上-->
+  <meta http-equiv="Cache" content="no-cache">
+
+  <!-- Bootstrap CSS -->
+  <link rel="icon" href="{{websiteIco}}" type="images/x-ico" />
+  <title>{{websiteTitle}}</title>
+
+  <style type="text/css">
+    div {
+      margin: 0 auto;
+      width: 700px;
+      height: 100px;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+    .cyan{
+      color: rgb(0,255,255);
+    }
+    .orange{
+      color: rgb(255,127,39);
+    }
+    .f35{
+      font-size:35px;
+    }
+    .f30{
+      font-size: 30px;
+    }
+  </style>
+
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?d88a856e26dfdb8ab63efc207e443099";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body style=" background-color:rgb(30,30,30);color:rgb(255,255,255)">
+  <section>
+    <div>
+      <h1 style="font-size:40px; color:rgb(255,255,255) ">更新日志</h1>
+
+      {% for log in updates %}
+      {% if loop.first %}
+      <h2 class="cyan f35">{{ log.date }} : {{ log.version }} [最新版本]</h2>
+      {% elif log.isImp == true %}
+      <h2 class="orange f35">{{ log.date }} : {{ log.version }} [重要版本]</h2>
+      {% else %}
+      <h2 class="orange f30">{{ log.date }} : {{ log.version }}</h2>
+      {% endif %}
+      <ul>
+        {% for change in log.changes %}
+        <li>{{ change }}</li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+
+
+
+      <h2 style="font-size:35px;"><a style="color: aqua;" href="#top">👆返回顶部👆</a></h2>
+
+    </div>
+  </section>
+</body>
+
+<script type="text/javascript">
+  //js后缀加个时间戳每回更新都会改变，浏览器视其为新的js不会进行缓存
+  document.write('<script type="text/javascript" src="js/test.js?time=' + new Date().getTime() + '"><' + '/' +
+    'script>');
+  //css也同上
+  document.write('<link rel="stylesheet" href="css/test.css?time=' + new Date().getTime() + '"/>');
+</script>
+
+</html>

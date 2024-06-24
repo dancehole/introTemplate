@@ -1,0 +1,168 @@
+{
+  "websiteTitle":"oh-blacktheme | 项目介绍",
+  "websiteIco":"./assets/images/favicon.ico",
+  "header": [
+    {
+      "text": "dancehole的主页",
+      "href": "https://gitee.com/dancehole",
+      "target": "_blank",
+      "style": "color:red",
+      "extraClass": ""
+    },
+    {
+      "text": "更新日志",
+      "href": "output_log.html",
+      "target": "",
+      "style": "",
+      "extraClass": ""
+    },
+    {
+      "text": "模板项目",
+      "href": "output_index.html",
+      "target": "",
+      "style": "",
+      "extraClass": "font-weight-bold"
+    }
+  ],
+  "intro": {
+    "title": "oh-template 项目介绍模板页面",
+    "subTitle": "基于jinja2+模板引擎的可编辑项目页面",
+    "text": "由dancehole基于某二创项目制作，因其简介美观+轻量级，于是修改为可以复用的模板，通过json动态配置表单实现兼容多个项目",
+    "image": "assets/images/main.png",
+    "btn": [
+      {
+        "ico": "assets/images/download.svg",
+        "text": "快速开始",
+        "href": "AndroidDownload.html",
+        "target": ""
+      },
+      {
+        "ico": "assets/images/dev.svg",
+        "text": "运维界面",
+        "href": "PCDownload.html",
+        "target": ""
+      }
+    ]
+  },
+  "desc": {
+    "title": "项目说明",
+    "content": [
+      "此游戏全部由哔哩哔哩<尔领尔亿>（LZ）独立制作完成。此游戏与当前可以见到的众多改版不同。此程序不是基于原版游戏的二次开发，而是从新从零开始制作。 该程序使用Cocos2dx游戏开发框架以及C++语言制作完成。目前该程序的所有源代码已经开源到github以及gitee上。如果你已经玩腻了原版，推荐你尝试一下与原版同样优秀但又不太一样的自制版本。注：拥有独立显卡配置的电脑游戏体验更佳。"
+      ,
+      "此游戏目前已经有多种游戏模式。有着不同种类的游戏关卡、有着超过几百关数量的游戏关卡、有着超大地图10行18列的游戏模式、有着“锤僵尸”无尽版的游戏模式等等种类。 此游戏使用的绝大部分图片、音乐、音效、字体等资源文件来源于原版一代、二代、以及三代的游戏资源，少部分收集于网络以及自己制作。 功能与玩法也更加多样。<br><br>&emsp;&emsp;目前游戏用有32种植物43种僵尸。该游戏含有原版1~3代中的一些元素。游戏名称由Komvan Rernart小伙伴提议命名。"
+      ,
+      "相比较与原版此游戏在画面分辨率远远高于原版。原版是(800x600)，此游戏设计分辨率是1080p(1920x1080)并且支持2k，4k等。 支持画面拉伸显示，适应屏幕比例为21:9，4:3等特殊屏幕比例。目前较为常见的屏幕比例为(16:9)。在刷新率方 面，在高帧率模式下，游戏帧率根据你的电脑屏幕刷新率保持一致。此程序使用原版游戏素材所以不得用于商业用途，否则后果自负。 当你运行此游戏或者使用其源代码时则认为默认同意此协议，否则请退出游戏并删除。"
+    ]
+  },
+  "exDesc": {
+    "title": "最低配置",
+    "content": []
+  },
+  "imageList": [
+    {
+      "type": "video",
+      "url": "assets/video/new.webm",
+      "title": "示例 - 游戏视频",
+      "width": "1280",
+      "height": "720"
+    },
+    {
+      "type": "image",
+      "url": "assets/images/example1.png",
+      "title": "示例 - 锤僵尸模式游戏画面",
+      "description": ""
+    },
+    {
+      "type": "image",
+      "url": "assets/images/example2.png",
+      "title": "示例 - 大地图模式游戏画面",
+      "description": ""
+    },
+    {
+      "type": "image",
+      "url": "assets/images/example3.png",
+      "title": "示例 - 普通模式游戏画面",
+      "description": ""
+    },
+    {
+      "type": "image",
+      "url": "assets/images/example.png",
+      "title": "示例 - 关卡选择画面",
+      "description": "采用二代游戏的模式."
+    },
+    {
+      "type": "image",
+      "url": "assets/images/menu.png",
+      "title": "示例 - 主菜单",
+      "description": "采用一代的游戏主菜单"
+    }
+  ],
+  "QA": [
+    {
+      "question": "该网站下载的程序没有病毒，如果Windows下载器导致电脑出现警告可能是误报，点击继续安装即可。如果不放心可以选择“直接下载”按钮下载。"
+    },
+    {
+      "question": "对于安卓版本，如果手机安装过之前的版本不要卸载之前的版本，可以直接覆盖安装新版本。注意：卸载之前的版本会导致存档被删除。"
+    },
+    {
+      "question": "如果内存太小可能导致出现游戏闪退。"
+    },
+    {
+      "question": "游戏bug反馈与游戏的一些建议可以点击进入项目issues或者发送邮件到下面的邮箱地址。"
+    },
+    {
+      "question": "游戏会不断完善不断更新，更新时间不确定，不定时更新。"
+    }
+  ],
+  "footer": {
+    "content": [
+      {
+        "title": "INFORMATION",
+        "content": [
+          {
+            "title": "BiliBili",
+            "url": "#"
+          },
+          {
+            "title": "游戏视频",
+            "url": "assets/images/web.png"
+          },
+          {
+            "title":"QQ群",
+            "url":"#"
+          },
+          {
+            "title": "游戏bug反馈与游戏建议",
+            "url": "https://github.com/dancehole/ZombieDefence"
+          }
+        ]
+      },
+      {
+        "title":"LINK",
+        "content":[
+          {"title": "网站二维码", "url": "#"},
+          {"title": "图片链接", "imageSrc": "assets/images/web.png"}
+        ]
+      },
+      {
+        "title":"CODE",
+        "content":[
+          {"title": "Github", "url": "https://github.com/ErLinErYi/PlantsVsZombies"},
+          {"title": "Gitee", "url": "https://gitee.com/GITLZ/PlantsVsZombies"},
+          {"title": "CSDN", "url": "https://blog.csdn.net/qq_40630246/article/details/102643196"},
+          {"title": "License", "url": "LICENSE.html"}
+        ]
+      },
+      {
+        "title":"OTHERS",
+        "content":[
+          {"title": "爱发电捐赠", "url": "https://afdian.net/@erlinersi"},
+          {"title": "更新日志", "url": "newlog/log.html"},
+          {"title": "捐赠我们", "url": "assets/images/fk.png"},
+          {"title": "捐赠者名单", "url": "donate.html"}
+        ]
+      }
+    ],
+    "author": "2022-2024 . dancehole"
+  }
+}

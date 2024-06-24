@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!--设置过期时间设置0为直接过期并清除缓存-->
+    <meta http-equiv="Expires" content="0">
+    <!--设置不缓存页面-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <!--设置不修改消息存储-->
+    <meta http-equiv="Cache-control" content="no-cache">
+    <!--同上-->
+    <meta http-equiv="Cache" content="no-cache">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no"/> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/goog.css" rel="stylesheet">
+
+    <link rel="icon" href="{{websiteIco}}" type="images/x-ico" />
+    <title>{{websiteTitle}}</title>
+    <style type="text/css">
+        a:hover {
+            color: #007BFF;
+        }
+    </style>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?d88a856e26dfdb8ab63efc207e443099";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body style="background-color: #000000;">
+    <!--导航栏-->
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary">
+        <div class="container">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation" style="margin: 100px 0px 0px 0px; size: a3;">
+                <i class="icon ion-md-menu text-light"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    {% for item in header %}
+                    <li class="nav-item mx-4">
+                        <a class="nav-link{{ ' ' + item.extraClass if item.extraClass else '' }}"
+                            href="{{ item.href | default('')}}" target="{{ item.target }}"
+                            style="{{ item.style|string|default('') }}" id="{{ item.id|string|default('') }}">
+                            {{ item.text }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--介绍与项目下载-->
+    <section id="hero" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-7 d-flex mt-5">
+                    <div class="align-self-center">
+                        <h1 class="display-4 text-light">{{intro.title}}</h1>
+                        <p class="lead gray mt-4">{{intro.subTitle}}</p>
+                        <p class="lead text-light mt-4">{{intro.text}}
+                        </p>
+
+                        {%for item in intro.btn%}
+                        <a href="{{item.href}}" class="btn btn-secondary mt-5 mr-20 max-len-200" target="_blank">
+                            <img class="btn-img" src="{{item.ico}}" />
+                            {{item.text}}
+                        </a>
+                        {%endfor%}
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 col-sm-5 d-flex mt-5">
+                    <div class="align-self-center text-center mx-auto">
+                        <img src="assets/images/main.png" class="img-fluid main-photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--说明-->
+    <section id="testimonial">
+        <div class="container" style="color:white">
+            <h2>{{desc.title}}</h2>
+            <div class="row mt-5">
+                {%for item in desc.content%}
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card p-4" style="background-color:rgba(40,40,40,0.9)">
+                        <p style="text-align: left;text-indent: 2em;" class="lead mt-2">
+                            {{item}}
+                        </p>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+
+            <br /><br /><br />
+            <h2>{{exDesc.title}}</h2>
+            <div class="row mt-5">
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card p-4" style="background-color:rgba(40,40,40,0.9)">
+                        <br />操作系统：Windows 7/8/10 32/64 bit
+                        <br />处理器：2.50GHz+ 处理器
+                        <br />内存：4GB+ RAM
+                        <br />显卡：独立显卡、1G+ 显存
+                        <br />硬盘所需空间：500MB+ 硬盘剩余空间
+                        <br />分辨率：1920 ×1080（1080P+)
+
+                        <div class="d-flex mt-3">
+                            <div class="user align-self-center mr-3">
+                                <img src="assets/images/win.png">
+                            </div>
+                            <div class="user-info align-self-center">
+                                <h6 class="mb-0">Windows</h6>
+                                <small>Win7/Win8/Win10</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card p-4" style="background-color:rgba(40,40,40,0.9)">
+                        <br />操作系统：android 4.0+ 64 bit
+                        <br />处理器：2.50GHz+ 处理器
+                        <br />内存：4GB+ RAM
+                        <br />硬盘所需空间：200MB+ 硬盘剩余空间
+                        <br />分辨率：1920 ×1080（1080P+)
+                        <br />刷新率：60 +
+                        <div class="d-flex mt-3">
+                            <div class="user align-self-center mr-3">
+                                <img src="assets/images/android.png">
+                            </div>
+                            <div class="user-info align-self-center">
+                                <h6 class="mb-0">Android</h6>
+                                <small>android 4.0+</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card p-4" style="background-color:rgba(40,40,40,0.9)">
+                        <br />操作系统：......
+                        <br />处理器：......
+                        <br />内存：......
+                        <br />硬盘所需空间：......
+                        <br />声卡：......
+                        <br />分辨率：......
+                        <div class="d-flex mt-3">
+                            <div class="user align-self-center mr-3">
+                                <img src="assets/images/ios.png">
+                            </div>
+                            <div class="user-info align-self-center">
+                                <h6 class="mb-0">......</h6>
+                                <small>......</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--图片演示-->
+    <section>
+        <div class="container" style="color:white">
+            <h2>运行画面</h2>
+            <div class="row mt-5">
+                {% for item in imageList %}
+                <div class="col-md-6">
+                    {% if item.type == 'video' %}
+                    <a href="{{ item.url }}" class="mt-3">
+                        <video autoplay="autoplay" src="{{ item.url }}" controls="controls" loop="loop" muted="muted"
+                            width="{{ item.width }}" height="{{ item.height }}" class="img-fluid rounded"></video>
+                    </a>
+                    {% else %}
+                    <a href="{{ item.url }}" target="_blank" class="mt-3">
+                        <img src="{{ item.url }}" class="img-fluid rounded">
+                    </a>
+                    {% endif %}
+                    <h5 class="mt-3"><span class="active">示例</span> - {{ item.title }}</h5>
+                    {% if item.description %}
+                    <p class="mt-2">{{ item.description }}</p>
+                    {% else %}
+                    <p class="mt-2"></p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+    </section>
+
+    <footer class="bg-primary" style="text-align: center;">
+        <div class="container">
+            <section>
+                <div style="text-align: left;color:gray;font-size: 20px;" class="container">
+                    <p style="font-size:23px;">疑难问题解答：</p>
+                    <ul>
+                        {% for qa in QA %}
+                        <li>{{ qa.question }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </section>
+
+            <!--页脚信息-->
+            <div class="row mt-5">
+                {%for item in footer.content%}
+                <div class="col-md-3">
+                    <h6 class="text-uppercase">{{item.title}}</h6>
+                    <ul class="list-unstyled">
+                        {% for link in item.content %}
+                            {% if link.imageSrc %}
+                            <li class="nav-item mx-4"><img src="{{ link.imageSrc }}" /></li>
+                            {% else %}
+                            <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a>{% if link.description %} - {{
+                                link.description }}{% endif %}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                {%endfor%}
+            </div>
+
+            <!--备案信息-->
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <p>China Zh</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p>
+                        <img src="assets/images/beian.png" />&emsp; Copyright © {{footer.author}} All rights
+                        reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>-->
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+    //js后缀加个时间戳每回更新都会改变，浏览器视其为新的js不会进行缓存
+    document.write('<script type="text/javascript" src="js/test.js?time=' + new Date().getTime() + '"><' + '/' +
+        'script>');
+    //css也同上
+    document.write('<link rel="stylesheet" href="css/test.css?time=' + new Date().getTime() + '"/>');
+
+    // alert("1.该网站下载的程序没有病毒，如果Windows下载器导致电脑出现警告可能是误报，点击继续安装即可。如果不放心可以选择“直接下载”按钮下载。\n2.对于安卓版本，如果手机安装过之前的版本不要卸载之前的版本，可以直接覆盖安装新版本。注意：卸载之前的版本会导致存档被删除。\n3.如果内存太小可能导致出现游戏闪退。\n4.游戏会不断完善不断更新，更新时间不确定，不定时更新。");
+</script>
