@@ -22,6 +22,11 @@
 
 #### 简介
 
+**使用方法**
+1. 编辑config.json ：模板的名称，默认从/template读取html模板，/json读取json配置，请独立配置资源文件。config.json包含了所有需要渲染的模板。json文件名不要带后缀！！
+2. 运行render.py
+
+
 #### 说明
 
 #### 额外说明
