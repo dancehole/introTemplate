@@ -25,9 +25,9 @@
     }
   ],
   "intro": {
-    "title": "oh-template 项目介绍模板页面",
+    "title": "oh-template <br>项目介绍模板页面",
     "subTitle": "基于jinja2+模板引擎的可编辑项目页面",
-    "text": "由dancehole基于某二创项目制作，因其简介美观+轻量级，于是修改为可以复用的模板，通过json动态配置表单实现兼容多个项目",
+    "text": "由dancehole基于某二创项目制作，因其简介美观+轻量级+有移动端适配，于是修改为可以复用的模板，通过json动态配置表单实现兼容多个项目",
     "image": "assets/images/main.png",
     "btn": [
       {
@@ -49,9 +49,9 @@
     "content": [
       "此游戏由dancehole二创自某pvz项目介绍，源地址：<a href='http://www.lzgd.xyz/web/index.html' target='_blank'>http://www.lzgd.xyz/web/index.html</a>，使用jinja2+json重构为可动态配置和编辑的模板，通过json动态配置表单实现兼容多个项目。"
       ,
-      "目前计划的项目有（可通过路由进行访问：）<br><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br><a href='https://gitee.com/dancehole/gdut-hetai-cup' target='_blank'>基于开源鸿蒙的智能水表</a>"
+      "目前计划的项目有<br>- <a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br>- <a href='https://gitee.com/dancehole/gdut-hetai-cup' target='_blank'>基于开源鸿蒙的智能水表</a>"
       ,
-      "相比较与原版此游戏在画面分辨率远远高于原版。原版是(800x600)，此游戏设计分辨率是1080p(1920x1080)并且支持2k，4k等。 支持画面拉伸显示，适应屏幕比例为21:9，4:3等特殊屏幕比例。目前较为常见的屏幕比例为(16:9)。在刷新率方 面，在高帧率模式下，游戏帧率根据你的电脑屏幕刷新率保持一致。此程序使用原版游戏素材所以不得用于商业用途，否则后果自负。 当你运行此游戏或者使用其源代码时则认为默认同意此协议，否则请退出游戏并删除。"
+      "目前项目仍处于开发阶段，欢迎贡献你的建议，或者加入我们，一起完善模板项目。详情可以点击<a href='https://gitee.com/dancehole/oh-template/issues' target='_blank'>这里</a>"
     ]
   },
   "exDesc": {
@@ -61,40 +61,39 @@
   "imageList": [
     {
       "type": "video",
-      "url": "assets/video/new.webm",
-      "title": "示例 - 游戏视频",
+      "url": "assets/video/watermetre.mp4",
+      "title": "示例视频",
+      "subTitle": "基于开源鸿蒙的智能水表",
       "width": "1280",
       "height": "720"
     },
     {
       "type": "image",
-      "url": "assets/images/example1.png",
-      "title": "示例 - 锤僵尸模式游戏画面",
+      "url": "assets/images/Web_games.png",
+      "title": "示例图片",
+      "subTitle": "图片1",
       "description": ""
     },
     {
       "type": "image",
-      "url": "assets/images/example2.png",
-      "title": "示例 - 大地图模式游戏画面",
+      "url": "assets/images/pic.png",
+      "title": "示例",
+      "subTitle": "作者图片",
       "description": ""
     },
     {
       "type": "image",
-      "url": "assets/images/example3.png",
-      "title": "示例 - 普通模式游戏画面",
-      "description": ""
+      "url": "assets/images/115.jpg",
+      "title": "示例",
+      "subTitle": "作者图片",
+      "description": "1234"
     },
     {
       "type": "image",
       "url": "assets/images/example.png",
-      "title": "示例 - 关卡选择画面",
-      "description": "采用二代游戏的模式."
-    },
-    {
-      "type": "image",
-      "url": "assets/images/menu.png",
-      "title": "示例 - 主菜单",
-      "description": "采用一代的游戏主菜单"
+      "title": "示例",
+      "subTitle": "作者图片",
+      "description": ""
     }
   ],
   "QA": [

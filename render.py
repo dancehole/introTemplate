@@ -69,6 +69,7 @@ def main():
     # 读取config
     template_list = Jinja2Demo.read_json(os.path.join(current_dir, "config.json"))["template"]
     for index in template_list:
+        print("正在处理",index)
         fill_data_path = os.path.join(current_dir, "json", index+'.json')
         output_path = os.path.join(current_dir, index+'.html')
         template_path = os.path.join(current_dir, "template",index+".html")
