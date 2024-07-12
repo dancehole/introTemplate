@@ -49,68 +49,57 @@
     "content": [
       "此游戏由dancehole二创自某pvz项目介绍，源地址：<a href='http://www.lzgd.xyz/web/index.html' target='_blank'>http://www.lzgd.xyz/web/index.html</a>，使用jinja2+json重构为可动态配置和编辑的模板，通过json动态配置表单实现兼容多个项目。"
       ,
-      "目前计划的项目有<br>- <a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br>- <a href='https://gitee.com/dancehole/gdut-hetai-cup' target='_blank'>基于开源鸿蒙的智能水表</a>"
+      "目前计划的项目有<br><ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br></li><li><a href='https://gitee.com/dancehole/gdut-hetai-cup' target='_blank'>基于开源鸿蒙的智能水表</a></li></ul>"
       ,
-      "目前项目仍处于开发阶段，欢迎贡献你的建议，或者加入我们，一起完善模板项目。详情可以点击<a href='https://gitee.com/dancehole/oh-template/issues' target='_blank'>这里</a>"
+      "目前已经完成的项目有：<br><ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br></li><li><a href='https://gitee.com/dancehole/gdut-hetai-cup' target='_blank'>基于开源鸿蒙的智能水表</a></li></ul>"
     ]
   },
   "exDesc": {
     "title": "最低配置",
     "content": []
   },
-  "imageList": [
-    {
-      "type": "video",
-      "url": "assets/video/watermetre.mp4",
-      "title": "示例视频",
-      "subTitle": "基于开源鸿蒙的智能水表",
-      "width": "1280",
-      "height": "720"
-    },
-    {
-      "type": "image",
-      "url": "assets/images/Web_games.png",
-      "title": "示例图片",
-      "subTitle": "图片1",
-      "description": ""
-    },
-    {
-      "type": "image",
-      "url": "assets/images/pic.png",
-      "title": "示例",
-      "subTitle": "作者图片",
-      "description": ""
-    },
-    {
-      "type": "image",
-      "url": "assets/images/115.jpg",
-      "title": "示例",
-      "subTitle": "作者图片",
-      "description": "1234"
-    },
-    {
-      "type": "image",
-      "url": "assets/images/example.png",
-      "title": "示例",
-      "subTitle": "作者图片",
-      "description": ""
-    }
-  ],
+  "displaySession":{
+    "title": "项目列表介绍",
+    "imageList": [
+      {
+        "type": "video",
+        "url": "assets/images/main/TXdemo.gif",
+        "title": "示例 - 游戏视频",
+        "width": "1280",
+        "height": "720"
+      },
+      {
+        "type": "image",
+        "url": "assets/images/main/chess.png",
+        "title": "五子棋",
+        "description": "三角网络五子棋、五子棋+vue版本"
+      },
+      {
+        "type": "image",
+        "url": "assets/images/main/codelabs.jpg",
+        "title": "CodeLabs",
+        "description": "后面即将改名ohLabs?防止版权问题"
+      },
+      {
+        "type": "image",
+        "url": "assets/images/main/water.gif",
+        "title": "基于开源鸿蒙的智能水表",
+        "description": "这名字也太长了"
+      },
+      {
+        "type": "image",
+        "url": "assets/images/main/TXdemo.gif",
+        "title": "腾讯地图demo",
+        "description": "纯前端html原生"
+      }
+    ]
+  },
   "QA": [
     {
-      "question": "该网站下载的程序没有病毒，如果Windows下载器导致电脑出现警告可能是误报，点击继续安装即可。如果不放心可以选择“直接下载”按钮下载。"
+      "question": "这里展示了一个无需列表，可以编辑常见问题解答"
     },
     {
-      "question": "对于安卓版本，如果手机安装过之前的版本不要卸载之前的版本，可以直接覆盖安装新版本。注意：卸载之前的版本会导致存档被删除。"
-    },
-    {
-      "question": "如果内存太小可能导致出现游戏闪退。"
-    },
-    {
-      "question": "游戏bug反馈与游戏的一些建议可以点击进入项目issues或者发送邮件到下面的邮箱地址。"
-    },
-    {
-      "question": "游戏会不断完善不断更新，更新时间不确定，不定时更新。"
+      "question": "目前暂时支持文字"
     }
   ],
   "footer": {
@@ -140,7 +129,7 @@
         "title":"LINK",
         "content":[
           {"title": "网站二维码", "url": "#"},
-          {"title": "图片链接", "imageSrc": "assets/images/web.png"}
+          {"title": "图片链接", "imageSrc": "assets/images/main/TXdemo.gif"}
         ]
       },
       {
