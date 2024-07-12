@@ -1254,19 +1254,24 @@ pre code {
 	}
 
 	/*修改后样式：根据宽度动态排列*/
-	.col-md-6 {
+	/* .col-md-6 {
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 50%;
 		flex: 0 0 auto;
 		width:auto;
-	}
+	} */
 	/*原样式：flex子元素占50%*/
-	/* .col-md-6 {
+	.col-md-6 {
 		-webkit-box-flex: 0;
 		-ms-flex: 0 0 50%;
 		flex: 0 0 50%;
 		width:auto;
-	} */
+
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+	}
 
 	.col-md-7 {
 		-webkit-box-flex: 0;
