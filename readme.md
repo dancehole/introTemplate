@@ -41,3 +41,47 @@
 #### 页脚
 
 
+
+
+
+关于设置flex图片流布局时的心得：(还是chatgpt+图片nb)
+
+从这样修改为这样：
+
+![image-20240630221815740](https://cdn.jsdelivr.net/gh/dancehole/image@main/codelabs/image-20240630221815740.png)
+
+![image-20240630221755260](https://cdn.jsdelivr.net/gh/dancehole/image@main/codelabs/image-20240630221755260.png)
+
+
+
+
+
+需求：原本是一个图片50%宽度，我希望展示成图片流的形式
+
+
+
+修改：
+
+```css
+.col-md-6 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		width:auto;
+	}
+```
+
+
+
+为
+
+```css
+	.col-md-6 {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 auto;
+		max-width:50%;
+	}
+```
+
+真的找了我很久。。。
