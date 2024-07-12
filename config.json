@@ -1,8 +1,6 @@
 {
   "template":[
     "index",
-    "log",
-    "chess",
-    "chessLog"
+    "log"
   ]
 }

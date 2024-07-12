@@ -175,9 +175,9 @@
     <!--图片演示-->
     <section>
         <div class="container" style="color:white">
-            <h2>运行画面</h2>
+            <h2>{{displaySession.title}}</h2>
             <div class="row mt-5">
-                {% for item in imageList %}
+                {% for item in displaySession.imageList %}
                 <div class="col-md-6">
                     {% if item.type == 'video' %}
                     <a href="{{ item.url }}" class="mt-3">
@@ -220,7 +220,7 @@
                     <ul class="list-unstyled">
                         {% for link in item.content %}
                             {% if link.imageSrc %}
-                            <li class="nav-item mx-4"><img src="{{ link.imageSrc }}" /></li>
+                            <li class="nav-item mx-4"><img class="QR-img" src="{{ link.imageSrc }}" /></li>
                             {% else %}
                             <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a>{% if link.description %} - {{
                                 link.description }}{% endif %}</li>

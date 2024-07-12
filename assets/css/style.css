@@ -224,5 +224,10 @@ footer a:hover {
     height:auto;
 }
 .gray{
-	color: #646464;
+	color: var(--extra-light);
+}
+
+.QR-img{
+    max-width: 100%;
+    max-height: 100%;
 }
