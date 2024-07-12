@@ -63,7 +63,7 @@
       {% if loop.first %}
       <h2 class="cyan f35">{{ log.date }} : {{ log.version }} [最新版本]</h2>
       {% elif log.isImp == true %}
-      <h2 class="orange f35">{{ log.date }} : {{ log.version }} [重要版本]</h2>
+      <h2 class="orange f30">{{ log.date }} : {{ log.version }} [重要版本]</h2>
       {% else %}
       <h2 class="orange f30">{{ log.date }} : {{ log.version }}</h2>
       {% endif %}
