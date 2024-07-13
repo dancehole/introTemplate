@@ -1,12 +1,22 @@
 [
   {
-    "useTemplate":"/template/index.html",
-    "useSource":"/json/index.json",
-    "outputSource":"/index.html"
+    "useTemplate":"template/index.html",
+    "useSource":"json/index.json",
+    "outputSource":"index.html"
   },
   {
-    "useTemplate":"/template/log.html",
-    "useSource":"/json/log.json",
-    "outputSource":"/log.html"
+    "useTemplate":"template/log.html",
+    "useSource":"json/log.json",
+    "outputSource":"log.html"
+  },
+  {
+    "useTemplate":"template/index.html",
+    "useSource":"json/chess.json",
+    "outputSource":"chess.html"
+  },
+  {
+    "useTemplate":"template/log.html",
+    "useSource":"json/log.json",
+    "outputSource":"chessLog.html"
   }
 ]

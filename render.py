@@ -67,14 +67,14 @@ def main():
     current_file_path = os.path.abspath(__file__)
     current_dir = os.path.dirname(current_file_path)
     # 读取config
-    template_list = Jinja2Demo.read_json(os.path.join(current_dir, "config.json"))["template"]
+    template_list = Jinja2Demo.read_json(os.path.join(current_dir, "config.json"))
     for index in template_list:
         print("正在处理",index)
-        fill_data_path = os.path.join(current_dir, "json", index+'.json')
-        output_path = os.path.join(current_dir, index+'.html')
-        template_path = os.path.join(current_dir, "template",index+".html")
+        fill_data_path = os.path.join(current_dir, index["useSource"])
+        output_path = os.path.join(current_dir, index["outputSource"])
+        template_path = os.path.join(current_dir, index["useTemplate"])
         
-        # print(fill_data_path, "\n", output_path, "\n", template_path)
+        print(fill_data_path, "\n", output_path, "\n", template_path)
         
         data = Jinja2Demo.read_json(fill_data_path)
         Jinja2Demo.render_template(data, output_path, template_path)
