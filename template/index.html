@@ -106,7 +106,8 @@
                 {%endfor%}
             </div>
 
-            {%if exDesc.content%}
+            <!--配置信息-->
+            {%if not exDesc.disable%}
             <br /><br /><br />
             <h2>{{exDesc.title}}</h2>
             <div class="row mt-5">
@@ -183,12 +184,12 @@
                 <div class="col-md-6">
                     {% if item.type == 'video' %}
                     <a href="{{ item.url }}" class="mt-3">
-                        <video autoplay="autoplay" src="{{ item.url }}" controls="controls" loop="loop" muted="muted"
+                        <video autoplay="autoplay" src="{{ item.src }}" controls="controls" loop="loop" muted="muted"
                         class="img-fluid rounded"></video>
                     </a>
                     {% else %}
                     <a href="{{ item.url }}" target="_blank" class="mt-3">
-                        <img src="{{ item.url }}" class="img-fluid rounded">
+                        <img src="{{ item.src }}" class="img-fluid rounded">
                     </a>
                     {% endif %}
                     <div class="caption">
