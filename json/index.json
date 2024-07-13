@@ -55,7 +55,6 @@
     ]
   },
   "exDesc": {
-    "disable" : true,
     "title": "最低配置",
     "content": []
   },
@@ -64,43 +63,33 @@
     "imageList": [
       {
         "type": "video",
-        "src": "assets/images/main/watermetre.mp4",
-        "url": "assets/images/main/watermetre.mp4",
+        "url": "assets/images/main/TXdemo.gif",
         "title": "示例 - 游戏视频",
-        "subTitle":"",
         "width": "1280",
         "height": "720"
       },
       {
         "type": "image",
-        "src": "assets/images/main/chess.png",
         "url": "assets/images/main/chess.png",
         "title": "五子棋",
-        "subTitle":"",
         "description": "三角网络五子棋、五子棋+vue版本"
       },
       {
         "type": "image",
-        "src": "assets/images/main/codelabs.jpg",
         "url": "assets/images/main/codelabs.jpg",
         "title": "CodeLabs",
-        "subTitle":"",
         "description": "后面即将改名ohLabs?防止版权问题"
       },
       {
         "type": "image",
-        "src": "assets/images/main/water.gif",
         "url": "assets/images/main/water.gif",
         "title": "基于开源鸿蒙的智能水表",
-        "subTitle":"",
         "description": "这名字也太长了"
       },
       {
         "type": "image",
-        "src": "assets/images/main/TXdemo.gif",
         "url": "assets/images/main/TXdemo.gif",
         "title": "腾讯地图demo",
-        "subTitle":"",
         "description": "纯前端html原生"
       }
     ]
