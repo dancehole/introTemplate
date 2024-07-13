@@ -1,6 +1,12 @@
-{
-  "template":[
-    "index",
-    "log"
-  ]
-}
+[
+  {
+    "useTemplate":"/template/index.html",
+    "useSource":"/json/index.json",
+    "outputSource":"/index.html"
+  },
+  {
+    "useTemplate":"/template/log.html",
+    "useSource":"/json/log.json",
+    "outputSource":"/log.html"
+  }
+]

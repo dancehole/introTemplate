@@ -4,28 +4,28 @@
   "header": [
     {
       "text": "dancehole的主页",
-      "href": "https://gitee.com/dancehole",
+      "href": "https://dancehole.github.io/Home/",
       "target": "_blank",
       "style": "color:red",
       "extraClass": ""
     },
     {
       "text": "更新日志",
-      "href": "output_log.html",
+      "href": "log.html",
       "target": "",
       "style": "",
       "extraClass": ""
     },
     {
       "text": "模板项目",
-      "href": "output_index.html",
+      "href": "index.html",
       "target": "",
       "style": "",
       "extraClass": "font-weight-bold"
     }
   ],
   "intro": {
-    "title": "oh-template <br>项目介绍模板页面",
+    "title": "oh-template<br>项目介绍模板页面",
     "subTitle": "基于jinja2+模板引擎的可编辑项目页面",
     "text": "由dancehole基于某二创项目制作，因其简介美观+轻量级+有移动端适配，于是修改为可以复用的模板，通过json动态配置表单实现兼容多个项目",
     "image": "assets/images/main.png",
@@ -33,13 +33,13 @@
       {
         "ico": "assets/images/download.svg",
         "text": "快速开始",
-        "href": "AndroidDownload.html",
+        "href": "https://github.com/dancehole/introTemplate",
         "target": ""
       },
       {
         "ico": "assets/images/dev.svg",
         "text": "运维界面",
-        "href": "PCDownload.html",
+        "href": "https://github.com/dancehole/introTemplate",
         "target": ""
       }
     ]
@@ -65,16 +65,25 @@
       {
         "type": "video",
         "src": "assets/images/main/watermetre.mp4",
-        "url": "assets/images/main/watermetre.mp4",
-        "title": "示例 - 游戏视频",
-        "subTitle":"",
+        "url": "./output/water/water.html",
+        "title": "项目视频",
+        "subTitle":"基于开源鸿蒙的智能水表",
+        "description":"点击查看视频",
         "width": "1280",
         "height": "720"
       },
       {
         "type": "image",
+        "src": "assets/images/main/water.gif",
+        "url": "assets/images/main/water.gif",
+        "title": "项目介绍",
+        "subTitle":"基于开源鸿蒙的智能水表(点击查看视频)",
+        "description": "这名字也太长了"
+      },
+      {
+        "type": "image",
         "src": "assets/images/main/chess.png",
-        "url": "assets/images/main/chess.png",
+        "url": "./output/water/chess.html",
         "title": "五子棋",
         "subTitle":"",
         "description": "三角网络五子棋、五子棋+vue版本"
@@ -82,35 +91,30 @@
       {
         "type": "image",
         "src": "assets/images/main/codelabs.jpg",
-        "url": "assets/images/main/codelabs.jpg",
+        "url": "https://dancehole.github.io/Codelabs/",
         "title": "CodeLabs",
         "subTitle":"",
         "description": "后面即将改名ohLabs?防止版权问题"
       },
       {
         "type": "image",
-        "src": "assets/images/main/water.gif",
-        "url": "assets/images/main/water.gif",
-        "title": "基于开源鸿蒙的智能水表",
-        "subTitle":"",
-        "description": "这名字也太长了"
-      },
-      {
-        "type": "image",
         "src": "assets/images/main/TXdemo.gif",
         "url": "assets/images/main/TXdemo.gif",
         "title": "腾讯地图demo",
-        "subTitle":"",
+        "subTitle":"https://dancehole.github.io/TXMapDemo/",
         "description": "纯前端html原生"
       }
     ]
   },
   "QA": [
     {
-      "question": "这里展示了一个无需列表，可以编辑常见问题解答"
+      "question": "这里展示了一个无序列表，可以编辑常见问题解答（可以优化）"
     },
     {
-      "question": "目前暂时支持文字"
+      "question": "目前暂时支持文字,不支持图文等"
+    },
+    {
+      "question": "欢迎贡献你的建议与意见"
     }
   ],
   "footer": {
@@ -131,8 +135,8 @@
             "url":"#"
           },
           {
-            "title": "游戏bug反馈与游戏建议",
-            "url": "https://github.com/dancehole/ZombieDefence"
+            "title": "bug反馈与优化建议",
+            "url": "https://github.com/dancehole/"
           }
         ]
       },
@@ -146,9 +150,9 @@
       {
         "title":"CODE",
         "content":[
-          {"title": "Github", "url": "https://github.com/ErLinErYi/PlantsVsZombies"},
-          {"title": "Gitee", "url": "https://gitee.com/GITLZ/PlantsVsZombies"},
-          {"title": "CSDN", "url": "https://blog.csdn.net/qq_40630246/article/details/102643196"},
+          {"title": "Github", "url": "https://github.com/dancehole"},
+          {"title": "Gitee", "url": "https://gitee.com/"},
+          {"title": "CSDN", "url": "https://blog.csdn.net/"},
           {"title": "License", "url": "LICENSE.html"}
         ]
       },
@@ -156,9 +160,9 @@
         "title":"OTHERS",
         "content":[
           {"title": "爱发电捐赠", "url": "https://afdian.net/@erlinersi"},
-          {"title": "更新日志", "url": "newlog/log.html"},
-          {"title": "捐赠我们", "url": "assets/images/fk.png"},
-          {"title": "捐赠者名单", "url": "donate.html"}
+          {"title": "更新日志", "url": "log.html"},
+          {"title": "捐赠我们", "url": ""},
+          {"title": "捐赠者名单", "url": ""}
         ]
       }
     ],

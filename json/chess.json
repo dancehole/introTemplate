@@ -1,0 +1,197 @@
+{
+  "websiteTitle":"oh-chess | 五子棋",
+  "websiteIco":"./assets/images/favicon.ico",
+  "header": [
+    {
+      "text": "dancehole的主页",
+      "href": "https://dancehole.github.io/Home/",
+      "target": "_blank",
+      "style": "color:red",
+      "extraClass": ""
+    },
+    {
+      "text": "更新日志",
+      "href": "./log.html",
+      "target": "",
+      "style": "",
+      "extraClass": ""
+    },
+    {
+      "text": "模板项目",
+      "href": "index.html",
+      "target": "",
+      "style": "",
+      "extraClass": "font-weight-bold"
+    }
+  ],
+  "intro": {
+    "title": "五子棋",
+    "subTitle": "五子棋+三角网络五子棋+vue版三角网络五子棋，任君选择",
+    "text": "大学期间因课程（c/数据结构）设计了多款不同的五子棋小游戏，在这里你可以看到【c+easyx】五子棋，【C++easyx三角网络五子棋，vue版可联机对战三角网络五子棋】",
+    "image": "assets/images/chess/chess1.png",
+    "btn": [
+      {
+        "ico": "assets/images/download.svg",
+        "text": "立即下载【五子棋】",
+        "href": "https://gitee.com/dancehole/chess/releases/download/V1.0.0/exe.zip",
+        "target": ""
+      },
+      {
+        "ico": "assets/images/download.svg",
+        "text": "立即下载【三角网络五子棋】",
+        "href": "https://gitee.com/dancehole/chess/releases/download/V1.0.0/exe.zip",
+        "target": ""
+      },
+      {
+        "ico": "assets/images/dev.svg",
+        "text": "立即试玩【web版三角网络五子棋】",
+        "href": "http://119.91.149.12:8088/start",
+        "target": ""
+      }
+    ]
+  },
+  "desc": {
+    "title": "项目说明",
+    "content": [
+      "大学期间，因不同课程的课程设计积累了多种好玩的小游戏，其中包含大一上的【C语言五子棋】、大二上数据结构的【三角网络五子棋】、同时积累了一些其他的小游戏项目（支持在线预览），包括象棋等"
+      ,
+      "你可以点击下方图片，选择你想要游玩的游戏（部分为PC端，大部分都是web同时适配移动端和PC）"
+      ,
+      "目前已经完成的项目有：<br><ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br></li><li><a href='https://gitee.com/dancehole/gdut-hetai-cup' target='_blank'>基于开源鸿蒙的智能水表</a></li></ul>"
+    ]
+  },
+  "exDesc": {
+    "disable" : false,
+    "title": "最低配置",
+    "content": []
+  },
+  "displaySession":{
+    "title": "游戏列表介绍",
+    "imageList": [
+      {
+        "type": "image",
+        "src": "assets/images/chess/chess1.png",
+        "title": "项目介绍",
+        "subTitle":"五子棋1",
+        "description": "五子棋"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/chess/chess2.png",
+        "title": "项目介绍",
+        "subTitle":"五子棋12",
+        "description": "三角网络五子棋、五子棋+vue版本"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/chess/chinese-chess.png",
+        "url": "https://dancehole.github.io/minigame/games/ChineseChess中国象棋/",
+        "title": "中国象棋",
+        "subTitle":"web在线游玩",
+        "description": "点击链接即可游玩"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/chess/cut-the-blocks.png",
+        "url": "https://dancehole.github.io/minigame/games/BlockNinja水果忍者方块版/",
+        "title": "切方块",
+        "subTitle":"web在线游玩 | 方块忍者",
+        "description": "点击链接即可游玩"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/chess/make-it-higher.png",
+        "url": "https://dancehole.github.io/minigame/games/BuildYourTower堆高高/",
+        "title": "BuildYourTower堆高高",
+        "subTitle":"web在线游玩",
+        "description": "点击链接即可游玩"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/chess/game.png",
+        "url": "https://dancehole.github.io/minigame/games/jsAdvantureGame2D闯关/",
+        "title": "jsAdvantureGame2D闯关",
+        "subTitle":"web在线游玩",
+        "description": "点击链接即可游玩"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/chess/jump-and-jump.png",
+        "url": "https://dancehole.github.io/minigame/games/jumpAndJump/",
+        "title": "jumpAndJump",
+        "subTitle":"web在线游玩 | 圣诞老人跳一跳",
+        "description": "点击链接即可游玩"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/chess/2048.png",
+        "url": "https://dancehole.github.io/minigame/games/2048Game/",
+        "title": "2048",
+        "subTitle":"web在线游玩",
+        "description": "点击链接即可游玩"
+      }
+    ]
+  },
+  "QA": [
+    {
+      "question": "这里展示了一个无序列表，可以编辑常见问题解答（可以优化）"
+    },
+    {
+      "question": "目前暂时支持文字,不支持图文等"
+    },
+    {
+      "question": "欢迎贡献你的建议与意见"
+    }
+  ],
+  "footer": {
+    "content": [
+      {
+        "title": "INFORMATION",
+        "content": [
+          {
+            "title": "BiliBili",
+            "url": "#"
+          },
+          {
+            "title": "游戏视频",
+            "url": "assets/images/web.png"
+          },
+          {
+            "title":"QQ群",
+            "url":"#"
+          },
+          {
+            "title": "bug反馈与优化建议",
+            "url": "https://github.com/dancehole/"
+          }
+        ]
+      },
+      {
+        "title":"LINK",
+        "content":[
+          {"title": "网站二维码", "url": "#"},
+          {"title": "图片链接", "imageSrc": "assets/images/main/TXdemo.gif"}
+        ]
+      },
+      {
+        "title":"CODE",
+        "content":[
+          {"title": "Github", "url": "https://github.com/dancehole"},
+          {"title": "Gitee", "url": "https://gitee.com/"},
+          {"title": "CSDN", "url": "https://blog.csdn.net/"},
+          {"title": "License", "url": "LICENSE.html"}
+        ]
+      },
+      {
+        "title":"OTHERS",
+        "content":[
+          {"title": "爱发电捐赠", "url": "https://afdian.net/@erlinersi"},
+          {"title": "更新日志", "url": "log.html"},
+          {"title": "捐赠我们", "url": ""},
+          {"title": "捐赠者名单", "url": ""}
+        ]
+      }
+    ],
+    "author": "2022-2024 . dancehole"
+  }
+}

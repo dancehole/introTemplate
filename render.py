@@ -63,7 +63,7 @@ class Jinja2Demo:
 
 # 测试
 def main():
-    # 获取目录
+    # 获取当前目录
     current_file_path = os.path.abspath(__file__)
     current_dir = os.path.dirname(current_file_path)
     # 读取config

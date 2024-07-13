@@ -1,0 +1,30 @@
+{
+  "websiteTitle":"oh-blacktheme | 更新日志",
+  "websiteIco":"./assets/images/favicon.ico",
+  "updates": [
+    {
+      "date": "2024年7月13日",
+      "version": "1.0.0",
+      "changes": [
+        "【feature】完成其他小游戏",
+        "【feature】完成模板制作"
+      ]
+    },
+    {
+      "date": "2023年5月",
+      "version": "0.2.0",
+      "changes": [
+        "【feature】完成三角网络五子棋",
+        "【ref】优化模板样式和布局"
+      ]
+    },
+    {
+      "date": "2021年11月",
+      "isImp":true,
+      "version": "0.1.0",
+      "changes": [
+        "【feature】完成五子棋--C语言，作者lhg dsh"
+      ]
+    }
+  ]
+}
