@@ -26,21 +26,19 @@
   ],
   "intro": {
     "title": "oh-template<br>项目介绍模板页面",
-    "subTitle": "基于jinja2+模板引擎的可编辑项目页面",
-    "text": "由dancehole基于某二创项目制作，因其简介美观+轻量级+有移动端适配，于是修改为可以复用的模板，通过json动态配置表单实现兼容多个项目",
+    "subTitle": "基于jinja2+模板引擎的可动态配置项目页面",
+    "text": "由dancehole基于某二创项目制作，因其简介美观+轻量级+有移动端适配，于是修改为可以复用的模板，通过json动态配置表单实现兼容多个项目，非常适合于项目、游戏的静态介绍和索引页。",
     "image": "assets/images/main.png",
     "btn": [
       {
         "ico": "assets/images/download.svg",
         "text": "快速开始",
-        "href": "https://github.com/dancehole/introTemplate",
-        "target": ""
+        "href": "https://github.com/dancehole/introTemplate"
       },
       {
         "ico": "assets/images/dev.svg",
         "text": "运维界面",
-        "href": "https://github.com/dancehole/introTemplate",
-        "target": ""
+        "href": "https://github.com/dancehole/introTemplate"
       }
     ]
   },
@@ -49,9 +47,9 @@
     "content": [
       "此游戏由dancehole二创自某pvz项目介绍，源地址：<a href='http://www.lzgd.xyz/web/index.html' target='_blank'>http://www.lzgd.xyz/web/index.html</a>，使用jinja2+json重构为可动态配置和编辑的模板，通过json动态配置表单实现兼容多个项目。"
       ,
-      "目前计划的项目有<br><ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br></li><li><a href='https://gitee.com/dancehole/gdut-hetai-cup' target='_blank'>基于开源鸿蒙的智能水表</a></li></ul>"
+      "目前计划的项目有<br><ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br></li><li><a href='https://gitee.com/dancehole/gdut-hetai-cup' target='_blank'>基于开源鸿蒙的智能水表</a></li><li><a href='https://github.com/dancehole/minigame' target='_blank'>小游戏合集</a><br></li></ul>"
       ,
-      "目前已经完成的项目有：<br><ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br></li><li><a href='https://gitee.com/dancehole/gdut-hetai-cup' target='_blank'>基于开源鸿蒙的智能水表</a></li></ul>"
+      "目前已经完成的项目有：<br><ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br></li><li><a href='https://github.com/dancehole/minigame' target='_blank'>小游戏合集</a><br></li></ul>"
     ]
   },
   "exDesc": {
@@ -83,7 +81,7 @@
       {
         "type": "image",
         "src": "assets/images/main/chess.png",
-        "url": "./output/water/chess.html",
+        "url": "./chess.html",
         "title": "五子棋",
         "subTitle":"",
         "description": "三角网络五子棋、五子棋+vue版本"
@@ -127,10 +125,6 @@
             "url": "#"
           },
           {
-            "title": "游戏视频",
-            "url": "assets/images/web.png"
-          },
-          {
             "title":"QQ群",
             "url":"#"
           },
@@ -143,8 +137,8 @@
       {
         "title":"LINK",
         "content":[
-          {"title": "网站二维码", "url": "#"},
-          {"title": "图片链接", "imageSrc": "assets/images/main/TXdemo.gif"}
+          {"title": "作者主页", "url": "#"},
+          {"title": "图片链接", "imageSrc": "assets/images/main/dancehole.jpg"}
         ]
       },
       {
@@ -159,7 +153,6 @@
       {
         "title":"OTHERS",
         "content":[
-          {"title": "爱发电捐赠", "url": "https://afdian.net/@erlinersi"},
           {"title": "更新日志", "url": "log.html"},
           {"title": "捐赠我们", "url": ""},
           {"title": "捐赠者名单", "url": ""}
