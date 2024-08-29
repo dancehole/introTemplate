@@ -1,0 +1,195 @@
+{
+  "websiteTitle":"图书管理系统",
+  "websiteIco":"./assets/images/library/favicon.ico",
+  "header": [
+    {
+      "text": "图书管理系统 | 立即打开",
+      "href": "http://106.53.68.231",
+      "target": "_blank",
+      "style": "color:red",
+      "extraClass": ""
+    },
+    {
+      "text": "更新日志",
+      "href": "log.html",
+      "target": "",
+      "style": "",
+      "extraClass": ""
+    },
+    {
+      "text": "模板项目",
+      "href": "index.html",
+      "target": "",
+      "style": "",
+      "extraClass": "font-weight-bold"
+    }
+  ],
+  "intro": {
+    "title": "图书管理系统",
+    "subTitle": "项目导引页",
+    "text": "基于vue+javaSpringboot的图书管理系统，项目整体较为简单，部署难度适中。基于github某开源项目二次开发",
+    "image": "assets/images/library/book.jpg",
+    "btn": [
+      {
+        "ico": "assets/images/download.svg",
+        "text": "系统入口",
+        "href": "http://106.53.68.231"
+      },
+      {
+        "ico": "assets/images/dev.svg",
+        "text": "介绍地址",
+        "href": "https://github.com/dancehole/introTemplate/output/library/library.html"
+      }
+    ]
+  },
+  "desc": {
+    "title": "项目说明",
+    "content": [
+      "前后端分离的图书管理系统项目。<br>后端使用Java+SpringBoot+MyBatis+MySQL<br>前端使用Vue+Axios+Element UI"
+      ,
+      "目前已经实现的功能有<br><ul><li><a href='' target='_blank'>图书信息管理维护</a><br></li><li><a href='' target='_blank'>图书评价</a></li><li><a href='' target='_blank'>图书借阅与归还</a><br></li></ul>"
+      ,
+      "目前正在实现的功能有：<br><ul><li><a href='' target='_blank'>图书采购</a><br></li><li><a href='' target='_blank'>等等</a><br></li></ul>"
+    ]
+  },
+  "exDesc": {
+    "disable" : false,
+    "title": "最低配置",
+    "content": []
+  },
+  "displaySession":{
+    "title": "项目介绍",
+    "imageList": [
+      {
+        "type": "video",
+        "src": "assets/images/library/video.mp4",
+        "url": "assets/images/library/video.mp4",
+        "title": "项目演示视频",
+        "subTitle":"包含环境准备",
+        "description":"点击查看视频",
+        "width": "1280",
+        "height": "720"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/library/1.png",
+        "url": "assets/images/library/1.png",
+        "title": "登录页面",
+        "subTitle":"可以选择管理员或者用户登录",
+        "description": "支持用户注册"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/library/2.png",
+        "title": "用户首页",
+        "subTitle":"展示版本，开发者信息和工信部备案信息等"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/library/3.png",
+        "title": "图书信息管理",
+        "subTitle":"图书信息管理，维护，编辑信息，删除",
+        "description": "可以在后台查阅和修改借阅信息"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/library/4.png",
+        "title": "修改图书信息",
+        "subTitle":"支持添加图片"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/library/5.png",
+        "title": "图书类别管理",
+        "subTitle":"可以修改、删除和编辑图书类别"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/library/6.png",
+        "title": "借阅信息管理",
+        "subTitle":"管理员后台查看借阅信息"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/library/7.png",
+        "title": "用户管理",
+        "subTitle":"管理员后台查看和编辑所有用户"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/library/8.png",
+        "title": "密码管理",
+        "subTitle":"修改用户密码"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/library/9.png",
+        "title": "用户-图书库",
+        "subTitle":"查看电子图书，预览，借阅图书"
+      },
+      {
+        "type": "image",
+        "src": "assets/images/library/10.png",
+        "title": "用户-借阅管理",
+        "subTitle":"用户借书、还书信息管理"
+      }
+    ]
+  },
+  "QA": [
+    {
+      "question": "这里展示了一个无序列表，可以编辑常见问题解答（可以优化）"
+    },
+    {
+      "question": "目前暂时支持文字,不支持图文等"
+    },
+    {
+      "question": "欢迎贡献你的建议与意见"
+    }
+  ],
+  "footer": {
+    "content": [
+      {
+        "title": "INFORMATION",
+        "content": [
+          {
+            "title": "BiliBili",
+            "url": "#"
+          },
+          {
+            "title":"QQ群",
+            "url":"#"
+          },
+          {
+            "title": "bug反馈与优化建议",
+            "url": "https://github.com/dancehole/"
+          }
+        ]
+      },
+      {
+        "title":"LINK",
+        "content":[
+          {"title": "作者主页", "url": "#"},
+          {"title": "图片链接", "imageSrc": "assets/images/main/dancehole.jpg"}
+        ]
+      },
+      {
+        "title":"CODE",
+        "content":[
+          {"title": "Github", "url": "https://github.com/dancehole"},
+          {"title": "Gitee", "url": "https://gitee.com/"},
+          {"title": "CSDN", "url": "https://blog.csdn.net/"},
+          {"title": "License", "url": "LICENSE.html"}
+        ]
+      },
+      {
+        "title":"OTHERS",
+        "content":[
+          {"title": "更新日志", "url": "log.html"},
+          {"title": "捐赠我们", "url": ""},
+          {"title": "捐赠者名单", "url": ""}
+        ]
+      }
+    ],
+    "author": "2022-2024 . dancehole <br> 粤ICP备7049337729号-1"
+  }
+}

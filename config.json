@@ -18,5 +18,10 @@
     "useTemplate":"template/log.html",
     "useSource":"json/log.json",
     "outputSource":"chessLog.html"
+  },
+  {
+    "useTemplate":"template/index.html",
+    "useSource":"json/library.json",
+    "outputSource":"library.html"
   }
 ]
