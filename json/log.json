@@ -3,11 +3,11 @@
   "websiteIco":"./assets/images/favicon.ico",
   "updates": [
     {
-      "date": "2023年10月25日",
-      "version": "1.3.6",
+      "date": "2024年8月30日",
+      "version": "1.0.0",
       "changes": [
-        "【example】an example",
-        "【example】an example"
+        "【feature】完成备案，正式发布",
+        "【feature】完成图书管理系统页面"
       ]
     },
     {
