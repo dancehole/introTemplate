@@ -77,12 +77,23 @@
         {% if desc.title %}
         <div class="section-header">
             <h2 class="section-title">{{ desc.title }}</h2>
+            {% if desc.subtitle %}
+            <p class="section-description">{{ desc.subtitle }}</p>
+            {% endif %}
         </div>
         {% endif %}
-        <div class="features-grid">
+        {% set content_count = desc.content|length %}
+        <div class="features-grid{% if content_count == 1 %} cols-1{% elif content_count == 2 %} cols-2{% endif %}">
             {% for item in desc.content %}
             <div class="feature-card">
+                {% if item.title %}
+                <h3 class="feature-title">{{ item.title }}</h3>
+                {% endif %}
+                {% if item.text %}
+                <p class="feature-text">{{ item.text | safe }}</p>
+                {% else %}
                 <p class="feature-text">{{ item | safe }}</p>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
@@ -147,11 +158,9 @@
                     {{ qa.question }}
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                 </button>
-                {% if qa.answer %}
                 <div class="faq-answer">
-                    <p>{{ qa.answer | safe }}</p>
+                    <p>{{ qa.answer | default('暂无详细说明') | safe }}</p>
                 </div>
-                {% endif %}
             </div>
             {% endfor %}
         </div>

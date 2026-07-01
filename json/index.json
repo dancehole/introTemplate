@@ -44,12 +44,20 @@
   },
   "desc": {
     "title": "项目说明",
+    "subtitle": "轻量、灵活、易用的静态页面解决方案",
     "content": [
-      "此游戏由dancehole二创自某pvz项目介绍，源地址：<a href='http://www.lzgd.xyz/web/index.html' target='_blank'>http://www.lzgd.xyz/web/index.html</a>，使用jinja2+json重构为可动态配置和编辑的模板，通过json动态配置表单实现兼容多个项目。"
-      ,
-      "目前计划的项目有<br><ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br></li><li><a href='https://gitee.com/dancehole/gdut-hetai-cup' target='_blank'>基于开源鸿蒙的智能水表</a></li><li><a href='https://github.com/dancehole/minigame' target='_blank'>小游戏合集</a><br></li></ul>"
-      ,
-      "目前已经完成的项目有：<br><ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br></li><li><a href='https://github.com/dancehole/minigame' target='_blank'>小游戏合集</a><br></li></ul>"
+      {
+        "title": "模板简介",
+        "text": "由dancehole基于某二创项目制作，使用jinja2+json重构为可动态配置和编辑的模板。通过json动态配置表单实现兼容多个项目，非常适合项目、游戏的静态介绍和索引页。源地址：<a href='http://www.lzgd.xyz/web/index.html' target='_blank'>http://www.lzgd.xyz/web/index.html</a>"
+      },
+      {
+        "title": "计划中的项目",
+        "text": "<ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a></li><li><a href='https://gitee.com/dancehole/gdut-hetai-cup' target='_blank'>基于开源鸿蒙的智能水表</a></li><li><a href='https://github.com/dancehole/minigame' target='_blank'>小游戏合集</a></li></ul>"
+      },
+      {
+        "title": "已完成的项目",
+        "text": "<ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a></li><li><a href='https://github.com/dancehole/minigame' target='_blank'>小游戏合集</a></li></ul>"
+      }
     ]
   },
   "exDesc": {
@@ -106,13 +114,20 @@
   },
   "QA": [
     {
-      "question": "这里展示了一个无序列表，可以编辑常见问题解答（可以优化）"
+      "question": "如何配置新的项目页面？",
+      "answer": "在json目录下创建或编辑对应的JSON配置文件，定义项目标题、描述、图片路径等信息，然后运行render.py脚本即可自动生成页面。"
     },
     {
-      "question": "目前暂时支持文字,不支持图文等"
+      "question": "支持哪些类型的多媒体内容？",
+      "answer": "支持图片（JPG/PNG/GIF）、视频（MP4/WebM）等多媒体格式，满足各类项目展示需求。"
     },
     {
-      "question": "欢迎贡献你的建议与意见"
+      "question": "如何部署到服务器？",
+      "answer": "生成的是纯静态文件，只需将整个项目目录上传到任何静态托管服务（如GitHub Pages、Vercel、Netlify等）即可。"
+    },
+    {
+      "question": "可以自定义样式吗？",
+      "answer": "当然可以！CSS文件完全独立，可以自由修改颜色、字体、布局等样式。也可以创建新的模板文件实现完全自定义的页面结构。"
     }
   ],
   "footer": {

@@ -297,6 +297,13 @@ a:hover {
     height: 20px;
 }
 
+.btn img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
 .hero-image {
     position: relative;
     animation: fadeInUp 0.8s ease-out 0.2s both;
@@ -402,6 +409,19 @@ a:hover {
     gap: 1.5rem;
 }
 
+/* 单栏模式：只有1-2条说明时居中显示更宽的卡片 */
+.features-grid.cols-1 {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.features-grid.cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .feature-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
@@ -436,11 +456,21 @@ a:hover {
 .feature-title {
     font-size: 1.25rem;
     margin-bottom: 1rem;
+    color: var(--text-primary);
 }
 
 .feature-text {
     color: var(--text-secondary);
     line-height: 1.7;
+}
+
+.feature-text ul {
+    margin: 0.5rem 0 0 1.2rem;
+    padding: 0;
+}
+
+.feature-text ul li {
+    margin: 0.3rem 0;
 }
 
 /* ================================================
@@ -626,7 +656,7 @@ a:hover {
 
 .faq-item.active .faq-answer {
     padding: 0 1.5rem 1.25rem;
-    max-height: 200px;
+    max-height: 500px;
 }
 
 .faq-answer p {
@@ -696,6 +726,13 @@ a:hover {
 
 .footer-links a:hover {
     color: var(--text-primary);
+}
+
+.footer-links img,
+.footer-links .QR-img {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 6px;
 }
 
 .footer-social {
