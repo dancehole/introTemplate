@@ -1,6 +1,7 @@
 {
   "websiteTitle":"oh-chess | 五子棋",
   "websiteIco":"./assets/images/favicon.ico",
+  "assetsPath":"../",
   "header": [
     {
       "text": "dancehole的主页",

@@ -7,21 +7,21 @@
   {
     "useTemplate":"template/log.html",
     "useSource":"json/log.json",
-    "outputSource":"log.html"
+    "outputSource":"static/log.html"
   },
   {
     "useTemplate":"template/index.html",
     "useSource":"json/chess.json",
-    "outputSource":"chess.html"
+    "outputSource":"static/chess.html"
   },
   {
     "useTemplate":"template/log.html",
-    "useSource":"json/log.json",
-    "outputSource":"chessLog.html"
+    "useSource":"json/chessLog.json",
+    "outputSource":"static/chessLog.html"
   },
   {
     "useTemplate":"template/index.html",
     "useSource":"json/library.json",
-    "outputSource":"library.html"
+    "outputSource":"static/library.html"
   }
 ]

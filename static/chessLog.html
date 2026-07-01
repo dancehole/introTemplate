@@ -13,8 +13,8 @@
   <meta http-equiv="Cache" content="no-cache">
 
   <!-- Bootstrap CSS -->
-  <link rel="icon" href="{{ assetsPath | default('') }}{{websiteIco | replace('./', '')}}" type="images/x-ico" />
-  <title>{{websiteTitle}}</title>
+  <link rel="icon" href="../assets/images/favicon.ico" type="images/x-ico" />
+  <title>oh-blacktheme | 更新日志</title>
 
   <style type="text/css">
     div {
@@ -59,20 +59,38 @@
     <div>
       <h1 style="font-size:40px; color:rgb(255,255,255) ">更新日志</h1>
 
-      {% for log in updates %}
-      {% if loop.first %}
-      <h2 class="cyan f35">{{ log.date }} : {{ log.version }} [最新版本]</h2>
-      {% elif log.isImp == true %}
-      <h2 class="orange f30">{{ log.date }} : {{ log.version }} [重要版本]</h2>
-      {% else %}
-      <h2 class="orange f30">{{ log.date }} : {{ log.version }}</h2>
-      {% endif %}
+      
+      
+      <h2 class="cyan f35">2024年7月13日 : 1.0.0 [最新版本]</h2>
+      
       <ul>
-        {% for change in log.changes %}
-        <li>{{ change }}</li>
-        {% endfor %}
+        
+        <li>【feature】完成其他小游戏</li>
+        
+        <li>【feature】完成模板制作</li>
+        
       </ul>
-      {% endfor %}
+      
+      
+      <h2 class="orange f30">2023年5月 : 0.2.0</h2>
+      
+      <ul>
+        
+        <li>【feature】完成三角网络五子棋</li>
+        
+        <li>【ref】优化模板样式和布局</li>
+        
+      </ul>
+      
+      
+      <h2 class="orange f30">2021年11月 : 0.1.0 [重要版本]</h2>
+      
+      <ul>
+        
+        <li>【feature】完成五子棋--C语言，作者lhg dsh</li>
+        
+      </ul>
+      
 
 
 

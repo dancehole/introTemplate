@@ -1,6 +1,7 @@
 {
   "websiteTitle":"图书管理系统",
   "websiteIco":"./assets/images/library/favicon.ico",
+  "assetsPath":"../",
   "header": [
     {
       "text": "图书管理系统 | 立即打开",

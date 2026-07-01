@@ -1,6 +1,7 @@
 {
   "websiteTitle":"oh-blacktheme | 更新日志",
   "websiteIco":"./assets/images/favicon.ico",
+  "assetsPath":"../",
   "updates": [
     {
       "date": "2024年7月13日",

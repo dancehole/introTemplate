@@ -1,389 +1,377 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="oh-template项目介绍模板 - 基于jinja2+模板引擎的可动态配置项目页面">
-    <title>oh-template | 项目介绍</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-    
-    <!-- Modern CSS -->
-    <link rel="stylesheet" href="assets/css/modern.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <!--设置过期时间设置0为直接过期并清除缓存-->
+    <meta http-equiv="Expires" content="0">
+    <!--设置不缓存页面-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <!--设置不修改消息存储-->
+    <meta http-equiv="Cache-control" content="no-cache">
+    <!--同上-->
+    <meta http-equiv="Cache" content="no-cache">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no"/> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/goog.css" rel="stylesheet">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="images/x-ico" />
+    <title>oh-blacktheme | 项目介绍</title>
+    <style type="text/css">
+        a:hover {
+            color: #007BFF;
+        }
+    </style>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?d88a856e26dfdb8ab63efc207e443099";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="#" class="navbar-brand">oh-template</a>
-            
-            <button class="navbar-toggle" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+
+<body style="background-color: #000000;">
+    <!--导航栏-->
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary">
+        <div class="container">
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation" style="margin: 100px 0px 0px 0px; size: a3;">
+                <i class="icon ion-md-menu text-light"></i>
             </button>
-            
-            <ul class="navbar-menu">
-                <li><a href="#hero">首页</a></li>
-                <li><a href="#features">特性</a></li>
-                <li><a href="#projects">项目</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="log.html">更新日志</a></li>
-                <li><a href="https://dancehole.github.io/Home/" target="_blank">作者主页</a></li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item mx-4">
+                        <a class="nav-link"
+                            href="https://dancehole.github.io/Home/" target="_blank"
+                            style="color:red" id="">
+                            dancehole的主页
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item mx-4">
+                        <a class="nav-link"
+                            href="log.html" target=""
+                            style="" id="">
+                            更新日志
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item mx-4">
+                        <a class="nav-link font-weight-bold"
+                            href="index.html" target=""
+                            style="" id="">
+                            模板项目
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span>模板引擎驱动 · 动态配置</span>
-                </div>
-                <h1 class="hero-title">
-                    <span>oh-template</span><br>
-                    项目介绍模板
-                </h1>
-                <p class="hero-description">
-                    基于jinja2+模板引擎的可动态配置项目页面。通过JSON动态配置表单实现兼容多个项目，适用于项目、游戏的静态介绍和索引页。
-                </p>
-                <div class="hero-buttons">
-                    <a href="https://github.com/dancehole/introTemplate" class="btn btn-primary" target="_blank">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        快速开始
-                    </a>
-                    <a href="https://github.com/dancehole/introTemplate" class="btn btn-secondary" target="_blank">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                        查看源码
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="assets/images/main.png" alt="oh-template预览">
-            </div>
-        </div>
-    </section>
+    <!--介绍与项目下载-->
+    <section id="hero" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-7 d-flex mt-5">
+                    <div class="align-self-center">
+                        <h1 class="display-4 text-light">oh-template<br>项目介绍模板页面</h1>
+                        <p class="lead gray mt-4">基于jinja2+模板引擎的可动态配置项目页面</p>
+                        <p class="lead text-light mt-4">由dancehole基于某二创项目制作，因其简介美观+轻量级+有移动端适配，于是修改为可以复用的模板，通过json动态配置表单实现兼容多个项目，非常适合于项目、游戏的静态介绍和索引页。
+                        </p>
 
-    <!-- Features Section -->
-    <section class="section features" id="features">
-        <div class="section-header">
-            <h2 class="section-title">为什么选择 <span>oh-template</span></h2>
-            <p class="section-description">轻量、灵活、易用，专为项目展示而生的静态页面解决方案</p>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                </div>
-                <h3 class="feature-title">轻量高效</h3>
-                <p class="feature-text">纯静态页面，无需数据库，通过JSON配置即可完成内容管理，快速部署上线。</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                </div>
-                <h3 class="feature-title">模板引擎</h3>
-                <p class="feature-text">基于jinja2模板引擎，支持变量、循环、条件判断，灵活定制页面结构。</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
-                </div>
-                <h3 class="feature-title">移动端适配</h3>
-                <p class="feature-text">响应式设计，从手机到桌面，完美适配各种屏幕尺寸，流畅体验。</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                </div>
-                <h3 class="feature-title">多媒体支持</h3>
-                <p class="feature-text">支持图片、视频、GIF动图展示，让你的项目呈现更加生动直观。</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-                </div>
-                <h3 class="feature-title">灵活配置</h3>
-                <p class="feature-text">通过JSON文件配置内容，无需修改代码即可更新项目信息。</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <h3 class="feature-title">开源免费</h3>
-                <p class="feature-text">MIT开源协议，免费使用，支持二次开发，欢迎贡献代码。</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        <div class="section-header">
-            <h2 class="section-title">项目展示</h2>
-            <p class="section-description">基于oh-template构建的优秀项目案例</p>
-        </div>
-        
-        <div class="projects-grid">
-            <!-- Project 1: 智能水表 -->
-            <article class="project-card">
-                <div class="project-media">
-                    <video src="assets/images/main/watermetre.mp4" muted loop playsinline></video>
-                    <div class="play-btn">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        
+                        <a href="https://github.com/dancehole/introTemplate" class="btn btn-secondary mt-5 mr-20 max-len-200" target="_blank">
+                            <img class="btn-img" src="assets/images/download.svg" />
+                            快速开始
+                        </a>
+                        
+                        <a href="https://github.com/dancehole/introTemplate" class="btn btn-secondary mt-5 mr-20 max-len-200" target="_blank">
+                            <img class="btn-img" src="assets/images/dev.svg" />
+                            运维界面
+                        </a>
+                        
                     </div>
-                    <span class="project-tag">视频演示</span>
                 </div>
-                <div class="project-content">
-                    <h3 class="project-title">基于开源鸿蒙的智能水表</h3>
-                    <p class="project-subtitle">物联网 · 智能硬件</p>
-                    <p class="project-desc">结合开源鸿蒙系统打造的智能水表解决方案，实现远程抄表、用水监控等功能。</p>
-                    <a href="./output/water/water.html" class="project-link">
-                        查看详情
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </article>
-            
-            <!-- Project 2: 智能水表GIF -->
-            <article class="project-card">
-                <div class="project-media">
-                    <img src="assets/images/main/water.gif" alt="智能水表">
-                    <span class="project-tag">动态图</span>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">智能水表演示</h3>
-                    <p class="project-subtitle">系统界面展示</p>
-                    <p class="project-desc">智能水表后台管理系统界面演示，实时数据监控与分析。</p>
-                    <a href="assets/images/main/water.gif" class="project-link" target="_blank">
-                        查看大图
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </article>
-            
-            <!-- Project 3: 五子棋 -->
-            <article class="project-card">
-                <div class="project-media">
-                    <img src="assets/images/main/chess.png" alt="三角网络五子棋">
-                    <span class="project-tag">游戏</span>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">三角网络五子棋</h3>
-                    <p class="project-subtitle">Vue.js · 双人对战</p>
-                    <p class="project-desc">创新的三角网格五子棋游戏，支持人机对战和在线匹配。</p>
-                    <a href="./chess.html" class="project-link" target="_blank">
-                        开始游戏
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </article>
-            
-            <!-- Project 4: CodeLabs -->
-            <article class="project-card">
-                <div class="project-media">
-                    <img src="assets/images/main/codelabs.jpg" alt="CodeLabs">
-                    <span class="project-tag">开发工具</span>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">CodeLabs</h3>
-                    <p class="project-subtitle">开发者平台</p>
-                    <p class="project-desc">开发者代码实验室，提供在线代码编辑和分享功能。</p>
-                    <a href="https://dancehole.github.io/Codelabs/" class="project-link" target="_blank">
-                        访问网站
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </article>
-            
-            <!-- Project 5: 腾讯地图Demo -->
-            <article class="project-card">
-                <div class="project-media">
-                    <img src="assets/images/main/TXdemo.gif" alt="腾讯地图Demo">
-                    <span class="project-tag">前端示例</span>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">腾讯地图Demo</h3>
-                    <p class="project-subtitle">JavaScript · 地图API</p>
-                    <p class="project-desc">纯前端实现的腾讯地图应用示例，展示地图SDK的基本用法。</p>
-                    <a href="https://dancehole.github.io/TXMapDemo/" class="project-link" target="_blank">
-                        查看源码
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section features" id="faq">
-        <div class="section-header">
-            <h2 class="section-title">常见问题</h2>
-            <p class="section-description">关于oh-template的一些常见问题解答</p>
-        </div>
-        
-        <div class="faq-list">
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    如何配置新的项目页面？
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>在json目录下创建或编辑对应的JSON配置文件，定义项目标题、描述、图片路径等信息，然后运行render.py脚本即可自动生成页面。</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    支持哪些类型的多媒体内容？
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>支持图片（JPG/PNG/GIF）、视频（MP4/WebM）、音频等多媒体格式，满足各类项目展示需求。</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    如何部署到服务器？
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>生成的是纯静态文件，只需将整个项目目录上传到任何静态托管服务（如GitHub Pages、Vercel、Netlify等）即可。</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
-                    可以自定义样式吗？
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="faq-answer">
-                    <p>当然可以！CSS文件完全独立，可以自由修改颜色、字体、布局等样式。也可以创建新的模板文件实现完全自定义的页面结构。</p>
+                <div class="col-lg-5 offset-lg-1 col-sm-5 d-flex mt-5">
+                    <div class="align-self-center text-center mx-auto">
+                        <img src="assets/images/main.png" class="img-fluid main-photo">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">oh-template</div>
-                    <p class="footer-desc">
-                        轻量、灵活、易用的项目介绍模板。基于jinja2+JSON配置，快速生成专业的项目展示页面。
+    <!--说明-->
+    <section id="testimonial">
+        <div class="container" style="color:white">
+            <h2>项目说明</h2>
+            <div class="row mt-5">
+                
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card p-4" style="background-color:rgba(40,40,40,0.9)">
+                        <p style="text-align: left;text-indent: 2em;" class="lead mt-2">
+                            此游戏由dancehole二创自某pvz项目介绍，源地址：<a href='http://www.lzgd.xyz/web/index.html' target='_blank'>http://www.lzgd.xyz/web/index.html</a>，使用jinja2+json重构为可动态配置和编辑的模板，通过json动态配置表单实现兼容多个项目。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card p-4" style="background-color:rgba(40,40,40,0.9)">
+                        <p style="text-align: left;text-indent: 2em;" class="lead mt-2">
+                            目前计划的项目有<br><ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br></li><li><a href='https://gitee.com/dancehole/gdut-hetai-cup' target='_blank'>基于开源鸿蒙的智能水表</a></li><li><a href='https://github.com/dancehole/minigame' target='_blank'>小游戏合集</a><br></li></ul>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card p-4" style="background-color:rgba(40,40,40,0.9)">
+                        <p style="text-align: left;text-indent: 2em;" class="lead mt-2">
+                            目前已经完成的项目有：<br><ul><li><a href='https://gitee.com/dancehole/chess' target='_blank'>三角网络五子棋</a><br></li><li><a href='https://github.com/dancehole/minigame' target='_blank'>小游戏合集</a><br></li></ul>
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!--配置信息-->
+            
+
+        </div>
+    </section>
+
+    <!--图片演示-->
+    <section>
+        <div class="container" style="color:white">
+            <h2>项目列表介绍</h2>
+            <div class="row mt-5">
+                
+                <div class="col-md-6">
+                    
+                    <a href="./output/water/water.html" class="mt-3">
+                        <video autoplay="autoplay" src="assets/images/main/watermetre.mp4" controls="controls" loop="loop" muted="muted"
+                        class="img-fluid rounded"></video>
+                    </a>
+                    
+                    <div class="caption">
+                        <h5 class="mt-3"><span class="active">项目视频</span> - 基于开源鸿蒙的智能水表</h5>
+                        
+                        <p>点击查看视频</p>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="col-md-6">
+                    
+                    <a href="assets/images/main/water.gif" target="_blank" class="mt-3">
+                        <img src="assets/images/main/water.gif" class="img-fluid rounded">
+                    </a>
+                    
+                    <div class="caption">
+                        <h5 class="mt-3"><span class="active">项目介绍</span> - 基于开源鸿蒙的智能水表(点击查看视频)</h5>
+                        
+                        <p>这名字也太长了</p>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="col-md-6">
+                    
+                    <a href="./chess.html" target="_blank" class="mt-3">
+                        <img src="assets/images/main/chess.png" class="img-fluid rounded">
+                    </a>
+                    
+                    <div class="caption">
+                        <h5 class="mt-3"><span class="active">五子棋</span> - </h5>
+                        
+                        <p>三角网络五子棋、五子棋+vue版本</p>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="col-md-6">
+                    
+                    <a href="https://dancehole.github.io/Codelabs/" target="_blank" class="mt-3">
+                        <img src="assets/images/main/codelabs.jpg" class="img-fluid rounded">
+                    </a>
+                    
+                    <div class="caption">
+                        <h5 class="mt-3"><span class="active">CodeLabs</span> - </h5>
+                        
+                        <p>后面即将改名ohLabs?防止版权问题</p>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="col-md-6">
+                    
+                    <a href="assets/images/main/TXdemo.gif" target="_blank" class="mt-3">
+                        <img src="assets/images/main/TXdemo.gif" class="img-fluid rounded">
+                    </a>
+                    
+                    <div class="caption">
+                        <h5 class="mt-3"><span class="active">腾讯地图demo</span> - https://dancehole.github.io/TXMapDemo/</h5>
+                        
+                        <p>纯前端html原生</p>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary" style="text-align: center;">
+        <div class="container">
+            <section>
+                <div style="text-align: left;color:gray;font-size: 20px;" class="container">
+                    <p style="font-size:23px;">疑难问题解答：</p>
+                    <ul>
+                        
+                        <li>这里展示了一个无序列表，可以编辑常见问题解答（可以优化）</li>
+                        
+                        <li>目前暂时支持文字,不支持图文等</li>
+                        
+                        <li>欢迎贡献你的建议与意见</li>
+                        
+                    </ul>
+                </div>
+            </section>
+
+            <!--页脚信息-->
+            <div class="row mt-5">
+                
+                <div class="col-md-3">
+                    <h6 class="text-uppercase">INFORMATION</h6>
+                    <ul class="list-unstyled">
+                        
+                            
+                            <li><a href="#" target="_blank">BiliBili</a></li>
+                            
+                        
+                            
+                            <li><a href="#" target="_blank">QQ群</a></li>
+                            
+                        
+                            
+                            <li><a href="https://github.com/dancehole/" target="_blank">bug反馈与优化建议</a></li>
+                            
+                        
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h6 class="text-uppercase">LINK</h6>
+                    <ul class="list-unstyled">
+                        
+                            
+                            <li><a href="#" target="_blank">作者主页</a></li>
+                            
+                        
+                            
+                            <li class="nav-item mx-4"><img class="QR-img" src="assets/images/main/dancehole.jpg" /></li>
+                            
+                        
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h6 class="text-uppercase">CODE</h6>
+                    <ul class="list-unstyled">
+                        
+                            
+                            <li><a href="https://github.com/dancehole" target="_blank">Github</a></li>
+                            
+                        
+                            
+                            <li><a href="https://gitee.com/" target="_blank">Gitee</a></li>
+                            
+                        
+                            
+                            <li><a href="https://blog.csdn.net/" target="_blank">CSDN</a></li>
+                            
+                        
+                            
+                            <li><a href="LICENSE.html" target="_blank">License</a></li>
+                            
+                        
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h6 class="text-uppercase">OTHERS</h6>
+                    <ul class="list-unstyled">
+                        
+                            
+                            <li><a href="log.html" target="_blank">更新日志</a></li>
+                            
+                        
+                            
+                            <li><a href="" target="_blank">捐赠我们</a></li>
+                            
+                        
+                            
+                            <li><a href="" target="_blank">捐赠者名单</a></li>
+                            
+                        
+                    </ul>
+                </div>
+                
+            </div>
+
+            <!--备案信息-->
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <p>China Zh</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p>
+                        <img src="assets/images/beian.png" />
+                        <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2024302719号-1</a>
+                        <br>
+                        Copyright © 2022-2024 . dancehole All rights reserved.
                     </p>
-                    <div class="footer-social">
-                        <a href="https://github.com/dancehole/" target="_blank" title="GitHub">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        </a>
-                        <a href="#" target="_blank" title="哔哩哔哩">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a3.556 3.556 0 0 1-.986-2.426c0-.938.328-1.742.986-2.413a3.36 3.36 0 0 1 2.426-1.013 3.36 3.36 0 0 1 2.426 1.013 3.36 3.36 0 0 1 1.013 2.426c0 .911-.339 1.689-1.013 2.333zm-1.36 2.786a2.222 2.222 0 0 0 .667 1.603c.4.422.895.64 1.48.653h.027c.585-.013 1.08-.23 1.48-.653a2.222 2.222 0 0 0 .667-1.603V6.186a2.222 2.222 0 0 0-.667-1.603 2.222 2.222 0 0 0-1.48-.653h-.027c-.585.013-1.08.23-1.48.653a2.222 2.222 0 0 0-.667 1.603zM8 11.4v1.333c0 .587-.21 1.093-.626 1.52-.418.426-.927.64-1.52.64-.6 0-1.107-.214-1.52-.64-.416-.427-.627-.933-.627-1.52V11.4c0-.593.21-1.1.626-1.52.414-.426.92-.64 1.52-.64.594 0 1.1.214 1.52.64.417.427.627.934.627 1.52z"/></svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h4 class="footer-title">关于</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://github.com/dancehole/" target="_blank">作者主页</a></li>
-                        <li><a href="https://github.com/dancehole/introTemplate" target="_blank">项目源码</a></li>
-                        <li><a href="log.html">更新日志</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4 class="footer-title">链接</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://gitee.com/dancehole/" target="_blank">Gitee</a></li>
-                        <li><a href="https://blog.csdn.net/" target="_blank">CSDN</a></li>
-                        <li><a href="LICENSE.html">开源协议</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4 class="footer-title">支持</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">反馈问题</a></li>
-                        <li><a href="#">贡献代码</a></li>
-                        <li><a href="#">联系我们</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p class="footer-copyright">
-                    Copyright © 2022-2024 <a href="https://github.com/dancehole/" target="_blank">dancehole</a> All rights reserved.
-                </p>
-                <div class="footer-badges">
-                    <a href="https://beian.miit.gov.cn/" target="_blank">
-                        <img src="assets/images/beian.png" alt="备案">
-                        粤ICP备2024302719号-1
-                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            const menu = document.querySelector('.navbar-menu');
-            menu.classList.toggle('active');
-        }
-
-        // FAQ toggle
-        function toggleFaq(btn) {
-            const item = btn.parentElement;
-            const isActive = item.classList.contains('active');
-            
-            // Close all
-            document.querySelectorAll('.faq-item').forEach(faq => {
-                faq.classList.remove('active');
-            });
-            
-            // Open clicked if wasn't active
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        }
-
-        // Video hover play
-        document.querySelectorAll('.project-media video').forEach(video => {
-            const card = video.closest('.project-card');
-            
-            card.addEventListener('mouseenter', () => {
-                video.play().catch(() => {});
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                video.pause();
-                video.currentTime = 0;
-            });
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // Close mobile menu if open
-                    document.querySelector('.navbar-menu').classList.remove('active');
-                }
-            });
-        });
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>-->
+
 </body>
+
 </html>
+
+<script type="text/javascript">
+    //js后缀加个时间戳每回更新都会改变，浏览器视其为新的js不会进行缓存
+    document.write('<script type="text/javascript" src="js/test.js?time=' + new Date().getTime() + '"><' + '/' +
+        'script>');
+    //css也同上
+    document.write('<link rel="stylesheet" href="css/test.css?time=' + new Date().getTime() + '"/>');
+
+    // alert("1.该网站下载的程序没有病毒，如果Windows下载器导致电脑出现警告可能是误报，点击继续安装即可。如果不放心可以选择“直接下载”按钮下载。\n2.对于安卓版本，如果手机安装过之前的版本不要卸载之前的版本，可以直接覆盖安装新版本。注意：卸载之前的版本会导致存档被删除。\n3.如果内存太小可能导致出现游戏闪退。\n4.游戏会不断完善不断更新，更新时间不确定，不定时更新。");
+</script>
