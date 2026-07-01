@@ -1,281 +1,256 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <!--设置过期时间设置0为直接过期并清除缓存-->
-    <meta http-equiv="Expires" content="0">
-    <!--设置不缓存页面-->
-    <meta http-equiv="Pragma" content="no-cache">
-    <!--设置不修改消息存储-->
-    <meta http-equiv="Cache-control" content="no-cache">
-    <!--同上-->
-    <meta http-equiv="Cache" content="no-cache">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no"/> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ assetsPath | default('') }}assets/css/min.css">
-    <link rel="stylesheet" href="{{ assetsPath | default('') }}assets/css/style.css">
-    <link href="{{ assetsPath | default('') }}assets/css/goog.css" rel="stylesheet">
-
-    <link rel="icon" href="{{ assetsPath | default('') }}{{websiteIco | replace('./', '')}}" type="images/x-ico" />
-    <title>{{websiteTitle}}</title>
-    <style type="text/css">
-        a:hover {
-            color: #007BFF;
-        }
-    </style>
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?d88a856e26dfdb8ab63efc207e443099";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ intro.subTitle | default('项目介绍模板') }}">
+    <title>{{ websiteTitle }}</title>
+    <link rel="icon" href="{{ assetsPath | default('') }}{{ websiteIco | replace('./', '') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ assetsPath | default('') }}assets/css/modern.css">
 </head>
-
-<body style="background-color: #000000;">
-    <!--导航栏-->
-    <nav class="navbar navbar-expand-lg fixed-top bg-primary">
-        <div class="container">
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation" style="margin: 100px 0px 0px 0px; size: a3;">
-                <i class="icon ion-md-menu text-light"></i>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="{{ homeUrl | default('index.html') }}" class="navbar-brand">{{ brandName | default('oh-template') }}</a>
+            <button class="navbar-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    {% for item in header %}
-                    <li class="nav-item mx-4">
-                        <a class="nav-link{{ ' ' + item.extraClass if item.extraClass else '' }}"
-                            href="{{ item.href | default('')}}" target="{{ item.target }}"
-                            style="{{ item.style|string|default('') }}" id="{{ item.id|string|default('') }}">
-                            {{ item.text }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+            <ul class="navbar-menu">
+                {% for item in header %}
+                <li>
+                    <a href="{{ item.href | default('#') }}" target="{{ item.target | default('_self') }}">
+                        {{ item.text }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </nav>
 
-    <!--介绍与项目下载-->
-    <section id="hero" class="bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-7 d-flex mt-5">
-                    <div class="align-self-center">
-                        <h1 class="display-4 text-light">{{intro.title}}</h1>
-                        <p class="lead gray mt-4">{{intro.subTitle}}</p>
-                        <p class="lead text-light mt-4">{{intro.text}}
-                        </p>
-
-                        {%for item in intro.btn%}
-                        <a href="{{item.href}}" class="btn btn-secondary mt-5 mr-20 max-len-200" target="_blank">
-                            <img class="btn-img" src="{{ assetsPath | default('') }}{{item.ico}}" />
-                            {{item.text}}
-                        </a>
-                        {%endfor%}
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                {% if intro.badge %}
+                <div class="hero-badge">
+                    <span>{{ intro.badge }}</span>
                 </div>
-                <div class="col-lg-5 offset-lg-1 col-sm-5 d-flex mt-5">
-                    <div class="align-self-center text-center mx-auto">
-                        <img src="{{ assetsPath | default('') }}{{ intro.image if intro.image else 'assets/images/main.png' }}" class="img-fluid main-photo">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--说明-->
-    <section id="testimonial">
-        <div class="container" style="color:white">
-            <h2>{{desc.title}}</h2>
-            <div class="row mt-5">
-                {%for item in desc.content%}
-                <div class="col-lg-4 col-sm-12">
-                    <div class="card p-4" style="background-color:rgba(40,40,40,0.9)">
-                        <p style="text-align: left;text-indent: 2em;" class="lead mt-2">
-                            {{item}}
-                        </p>
-                    </div>
-                </div>
-                {%endfor%}
-            </div>
-
-            <!--配置信息-->
-            {%if not exDesc.disable%}
-            <br /><br /><br />
-            <h2>{{exDesc.title}}</h2>
-            <div class="row mt-5">
-                <div class="col-lg-4 col-sm-12">
-                    <div class="card p-4" style="background-color:rgba(40,40,40,0.9)">
-                        <br />操作系统：Windows 7/8/10 32/64 bit
-                        <br />处理器：2.50GHz+ 处理器
-                        <br />内存：4GB+ RAM
-                        <br />显卡：独立显卡、1G+ 显存
-                        <br />硬盘所需空间：500MB+ 硬盘剩余空间
-                        <br />分辨率：1920 ×1080（1080P+)
-
-                        <div class="d-flex mt-3">
-                            <div class="user align-self-center mr-3">
-                                <img src="{{ assetsPath | default('') }}assets/images/win.png">
-                            </div>
-                            <div class="user-info align-self-center">
-                                <h6 class="mb-0">Windows</h6>
-                                <small>Win7/Win8/Win10</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-12">
-                    <div class="card p-4" style="background-color:rgba(40,40,40,0.9)">
-                        <br />操作系统：android 4.0+ 64 bit
-                        <br />处理器：2.50GHz+ 处理器
-                        <br />内存：4GB+ RAM
-                        <br />硬盘所需空间：200MB+ 硬盘剩余空间
-                        <br />分辨率：1920 ×1080（1080P+)
-                        <br />刷新率：60 +
-                        <div class="d-flex mt-3">
-                            <div class="user align-self-center mr-3">
-                                <img src="{{ assetsPath | default('') }}assets/images/android.png">
-                            </div>
-                            <div class="user-info align-self-center">
-                                <h6 class="mb-0">Android</h6>
-                                <small>android 4.0+</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-12">
-                    <div class="card p-4" style="background-color:rgba(40,40,40,0.9)">
-                        <br />操作系统：......
-                        <br />处理器：......
-                        <br />内存：......
-                        <br />硬盘所需空间：......
-                        <br />声卡：......
-                        <br />分辨率：......
-                        <div class="d-flex mt-3">
-                            <div class="user align-self-center mr-3">
-                                <img src="{{ assetsPath | default('') }}assets/images/ios.png">
-                            </div>
-                            <div class="user-info align-self-center">
-                                <h6 class="mb-0">......</h6>
-                                <small>......</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endif %}
-
-        </div>
-    </section>
-
-    <!--图片演示-->
-    <section>
-        <div class="container" style="color:white">
-            <h2>{{displaySession.title}}</h2>
-            <div class="row mt-5">
-                {% for item in displaySession.imageList %}
-                <div class="col-md-6">
-                    {% if item.type == 'video' %}
-                    <a {%if item.url%}href="{{ item.url }}"{%endif%} class="mt-3">
-                        <video autoplay="autoplay" src="{{ assetsPath | default('') }}{{ item.src }}" controls="controls" loop="loop" muted="muted"
-                        class="img-fluid rounded"></video>
-                    </a>
+                {% endif %}
+                <h1 class="hero-title">
+                    {% if intro.titleSpan %}
+                    <span>{{ intro.titleSpan }}</span><br>
+                    {{ intro.title }}
                     {% else %}
-                    <a {%if item.url%}href="{{ item.url }}"{%endif%} target="_blank" class="mt-3">
-                        <img src="{{ assetsPath | default('') }}{{ item.src }}" class="img-fluid rounded">
+                    <span>{{ intro.title | safe }}</span>
+                    {% endif %}
+                </h1>
+                {% if intro.subTitle %}
+                <p class="hero-description">
+                    {{ intro.text | default(intro.subTitle) }}
+                </p>
+                {% endif %}
+                {% if intro.btn and intro.btn|length > 0 %}
+                <div class="hero-buttons">
+                    {% for item in intro.btn %}
+                    <a href="{{ item.href }}" class="btn {{ 'btn-primary' if loop.first else 'btn-secondary' }}" target="_blank">
+                        {% if item.ico %}
+                        <img src="{{ assetsPath | default('') }}{{ item.ico }}" style="width:20px;height:20px;">
+                        {% endif %}
+                        {{ item.text }}
+                    </a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            <div class="hero-image">
+                <img src="{{ assetsPath | default('') }}{{ intro.image if intro.image else 'assets/images/main.png' }}" alt="预览图">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Description Section -->
+    {% if desc and desc.content and desc.content|length > 0 %}
+    <section class="section features" id="features">
+        {% if desc.title %}
+        <div class="section-header">
+            <h2 class="section-title">{{ desc.title }}</h2>
+        </div>
+        {% endif %}
+        <div class="features-grid">
+            {% for item in desc.content %}
+            <div class="feature-card">
+                <p class="feature-text">{{ item | safe }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Projects / Display Section -->
+    {% if displaySession and displaySession.imageList and displaySession.imageList|length > 0 %}
+    <section class="section" id="projects">
+        {% if displaySession.title %}
+        <div class="section-header">
+            <h2 class="section-title">{{ displaySession.title }}</h2>
+        </div>
+        {% endif %}
+        <div class="projects-grid">
+            {% for item in displaySession.imageList %}
+            <article class="project-card">
+                <div class="project-media">
+                    {% if item.type == 'video' %}
+                    <video src="{{ assetsPath | default('') }}{{ item.src }}" muted loop playsinline></video>
+                    <div class="play-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                    {% else %}
+                    <img src="{{ assetsPath | default('') }}{{ item.src }}" alt="{{ item.title }}">
+                    {% endif %}
+                    {% if item.tag %}
+                    <span class="project-tag">{{ item.tag }}</span>
+                    {% endif %}
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">{{ item.title }}</h3>
+                    {% if item.subTitle %}
+                    <p class="project-subtitle">{{ item.subTitle }}</p>
+                    {% endif %}
+                    {% if item.description %}
+                    <p class="project-desc">{{ item.description }}</p>
+                    {% endif %}
+                    {% if item.url %}
+                    <a href="{{ item.url }}" class="project-link" {% if 'http' in item.url %}target="_blank"{% endif %}>
+                        查看详情
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                     {% endif %}
-                    <div class="caption">
-                        <h5 class="mt-3"><span class="active">{{item.title}}</span> - {{ item.subTitle }}</h5>
-                        {% if item.description %}
-                        <p>{{ item.description }}</p>
-                        {% endif %}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- FAQ Section -->
+    {% if QA and QA|length > 0 %}
+    <section class="section features" id="faq">
+        <div class="section-header">
+            <h2 class="section-title">常见问题</h2>
+        </div>
+        <div class="faq-list">
+            {% for qa in QA %}
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    {{ qa.question }}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                {% if qa.answer %}
+                <div class="faq-answer">
+                    <p>{{ qa.answer | safe }}</p>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">{{ brandName | default('oh-template') }}</div>
+                    <p class="footer-desc">
+                        {{ footer.desc | default('轻量、灵活、易用的项目介绍模板。') }}
+                    </p>
+                    {% if footer.social and footer.social|length > 0 %}
+                    <div class="footer-social">
+                        {% for s in footer.social %}
+                        <a href="{{ s.url }}" target="_blank" title="{{ s.title }}">
+                            {% if s.icon %}
+                            <img src="{{ assetsPath | default('') }}{{ s.icon }}" style="width:18px;height:18px;">
+                            {% else %}
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            {% endif %}
+                        </a>
+                        {% endfor %}
                     </div>
-                    
+                    {% endif %}
+                </div>
+                {% for item in footer.content %}
+                <div class="footer-column">
+                    <h4 class="footer-title">{{ item.title }}</h4>
+                    <ul class="footer-links">
+                        {% for link in item.content %}
+                        <li>
+                            {% if link.imageSrc %}
+                            <img src="{{ assetsPath | default('') }}{{ link.imageSrc }}" class="QR-img" alt="{{ link.title | default('二维码') }}">
+                            {% else %}
+                            <a href="{{ link.url }}" target="_blank">{{ link.title }}</a>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
                 </div>
                 {% endfor %}
             </div>
-        </div>
-    </section>
-
-    <footer class="bg-primary" style="text-align: center;">
-        <div class="container">
-            <section>
-                <div style="text-align: left;color:gray;font-size: 20px;" class="container">
-                    <p style="font-size:23px;">疑难问题解答：</p>
-                    <ul>
-                        {% for qa in QA %}
-                        <li>{{ qa.question }}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </section>
-
-            <!--页脚信息-->
-            <div class="row mt-5">
-                {%for item in footer.content%}
-                <div class="col-md-3">
-                    <h6 class="text-uppercase">{{item.title}}</h6>
-                    <ul class="list-unstyled">
-                        {% for link in item.content %}
-                            {% if link.imageSrc %}
-                            <li class="nav-item mx-4"><img class="QR-img" src="{{ assetsPath | default('') }}{{ link.imageSrc }}" /></li>
-                            {% else %}
-                            <li><a href="{{ link.url }}" target="_blank">{{ link.title }}</a>{% if link.description %} - {{
-                                link.description }}{% endif %}</li>
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
-                </div>
-                {%endfor%}
-            </div>
-
-            <!--备案信息-->
-            <div class="row mt-5">
-                <div class="col-md-4">
-                    <p>China Zh</p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <p>
-                        <img src="{{ assetsPath | default('') }}assets/images/beian.png" />
-                        <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2024302719号-1</a>
-                        <br>
-                        Copyright © {{footer.author}} All rights reserved.
-                    </p>
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    Copyright © {{ footer.author | default('dancehole') }} All rights reserved.
+                </p>
+                <div class="footer-badges">
+                    <a href="https://beian.miit.gov.cn/" target="_blank">
+                        <img src="{{ assetsPath | default('') }}assets/images/beian.png" alt="备案">
+                        {{ footer.beian | default('粤ICP备2024302719号-1') }}
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>-->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.navbar-menu').classList.toggle('active');
+        }
 
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(function(faq) {
+                faq.classList.remove('active');
+            });
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        document.querySelectorAll('.project-media video').forEach(function(video) {
+            var card = video.closest('.project-card');
+            card.addEventListener('mouseenter', function() {
+                video.play().catch(function() {});
+            });
+            card.addEventListener('mouseleave', function() {
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                var href = this.getAttribute('href');
+                if (href === '#' || href.length < 2) return;
+                e.preventDefault();
+                var target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.querySelector('.navbar-menu').classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>
-
-<script type="text/javascript">
-    //js后缀加个时间戳每回更新都会改变，浏览器视其为新的js不会进行缓存
-    document.write('<script type="text/javascript" src="js/test.js?time=' + new Date().getTime() + '"><' + '/' +
-        'script>');
-    //css也同上
-    document.write('<link rel="stylesheet" href="css/test.css?time=' + new Date().getTime() + '"/>');
-
-    // alert("1.该网站下载的程序没有病毒，如果Windows下载器导致电脑出现警告可能是误报，点击继续安装即可。如果不放心可以选择“直接下载”按钮下载。\n2.对于安卓版本，如果手机安装过之前的版本不要卸载之前的版本，可以直接覆盖安装新版本。注意：卸载之前的版本会导致存档被删除。\n3.如果内存太小可能导致出现游戏闪退。\n4.游戏会不断完善不断更新，更新时间不确定，不定时更新。");
-</script>

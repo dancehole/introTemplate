@@ -1,111 +1,246 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-  <meta charset="utf-8">
-  <!--设置过期时间设置0为直接过期并清除缓存-->
-  <meta http-equiv="Expires" content="0">
-  <!--设置不缓存页面-->
-  <meta http-equiv="Pragma" content="no-cache">
-  <!--设置不修改消息存储-->
-  <meta http-equiv="Cache-control" content="no-cache">
-  <!--同上-->
-  <meta http-equiv="Cache" content="no-cache">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oh-blacktheme | 更新日志</title>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/modern.css">
+    <style>
+        .log-page {
+            padding: 120px 2rem 80px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-  <!-- Bootstrap CSS -->
-  <link rel="icon" href="../assets/images/favicon.ico" type="images/x-ico" />
-  <title>oh-blacktheme | 更新日志</title>
+        .log-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
 
-  <style type="text/css">
-    div {
-      margin: 0 auto;
-      width: 700px;
-      height: 100px;
-    }
+        .log-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            margin-bottom: 0.5rem;
+        }
 
-    h1,
-    h2 {
-      text-align: center;
-    }
-    .cyan{
-      color: rgb(0,255,255);
-    }
-    .orange{
-      color: rgb(255,127,39);
-    }
-    .f35{
-      font-size:35px;
-    }
-    .f30{
-      font-size: 30px;
-    }
-  </style>
+        .log-title span {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-  <script>
-    var _hmt = _hmt || [];
-    (function () {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?d88a856e26dfdb8ab63efc207e443099";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
+        .log-subtitle {
+            color: var(--text-secondary);
+        }
 
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
 
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent) 0%, rgba(102, 126, 234, 0.1) 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 3rem;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            transform: translateX(-5px);
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+        }
+
+        .timeline-date {
+            font-size: 0.875rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .timeline-version {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .timeline-version .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--primary-gradient);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+            margin-left: 0.75rem;
+        }
+
+        .timeline-changes {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+        }
+
+        .timeline-changes ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .timeline-changes li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .timeline-changes li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-top: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            color: var(--accent-hover);
+        }
+
+        .back-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .QR-img {
+            max-width: 160px;
+            max-height: 160px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">oh-template</a>
+            <button class="navbar-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#">更新日志</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<body style=" background-color:rgb(30,30,30);color:rgb(255,255,255)">
-  <section>
-    <div>
-      <h1 style="font-size:40px; color:rgb(255,255,255) ">更新日志</h1>
+    <main class="log-page">
+        <a href="index.html" class="back-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            返回首页
+        </a>
 
-      
-      
-      <h2 class="cyan f35">2024年7月13日 : 1.0.0 [最新版本]</h2>
-      
-      <ul>
-        
-        <li>【feature】完成其他小游戏</li>
-        
-        <li>【feature】完成模板制作</li>
-        
-      </ul>
-      
-      
-      <h2 class="orange f30">2023年5月 : 0.2.0</h2>
-      
-      <ul>
-        
-        <li>【feature】完成三角网络五子棋</li>
-        
-        <li>【ref】优化模板样式和布局</li>
-        
-      </ul>
-      
-      
-      <h2 class="orange f30">2021年11月 : 0.1.0 [重要版本]</h2>
-      
-      <ul>
-        
-        <li>【feature】完成五子棋--C语言，作者lhg dsh</li>
-        
-      </ul>
-      
+        <header class="log-header">
+            <h1 class="log-title">更新日志</h1>
+            <p class="log-subtitle">记录项目的每一次成长与改进</p>
+        </header>
 
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2024年7月13日</div>
+                <h2 class="timeline-version">
+                    v1.0.0
+                    
+                    <span class="tag">最新版本</span>
+                    
+                </h2>
+                <div class="timeline-changes">
+                    <ul>
+                        
+                        <li>【feature】完成其他小游戏</li>
+                        
+                        <li>【feature】完成模板制作</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2023年5月</div>
+                <h2 class="timeline-version">
+                    v0.2.0
+                    
+                </h2>
+                <div class="timeline-changes">
+                    <ul>
+                        
+                        <li>【feature】完成三角网络五子棋</li>
+                        
+                        <li>【ref】优化模板样式和布局</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">2021年11月</div>
+                <h2 class="timeline-version">
+                    v0.1.0
+                    
+                    <span class="tag">重要版本</span>
+                    
+                </h2>
+                <div class="timeline-changes">
+                    <ul>
+                        
+                        <li>【feature】完成五子棋--C语言，作者lhg dsh</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </main>
 
-
-      <h2 style="font-size:35px;"><a style="color: aqua;" href="#top">👆返回顶部👆</a></h2>
-
-    </div>
-  </section>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.navbar-menu').classList.toggle('active');
+        }
+    </script>
 </body>
-
-<script type="text/javascript">
-  //js后缀加个时间戳每回更新都会改变，浏览器视其为新的js不会进行缓存
-  document.write('<script type="text/javascript" src="js/test.js?time=' + new Date().getTime() + '"><' + '/' +
-    'script>');
-  //css也同上
-  document.write('<link rel="stylesheet" href="css/test.css?time=' + new Date().getTime() + '"/>');
-</script>
-
 </html>
